@@ -86,7 +86,7 @@
                 content: 'CONTACT';
             }
         }
-
+        // TODO:fix active class to display yello icon
         a.active {
             svg {
                 color: #ffd700;
@@ -94,6 +94,8 @@
         }
     }
   }
+
+
   ul {
     position: absolute;
     bottom:  20px;
