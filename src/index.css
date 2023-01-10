@@ -4,8 +4,8 @@ html{
 }
 body {
   margin: 0;
-  /* TODO: fix font for sidbar */
-  font-family: 300 11px/1.4 'Helvetica Neue', 'sans-serif';
+  /* TODO: fix font for sidbar (video at minute 20*/
+  font: 300 11px/1.4 'Helvetica Neue', 'sans-serif';
   color: #444;
   background: #022c43;
   overflow: hidden;
