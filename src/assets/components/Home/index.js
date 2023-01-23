@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './index.scss';
 import AnimatedLetters from '../AnimatedLetters';
 import { useState } from 'react'
-// import { useEffect } from 'react';
+import { useEffect } from 'react';
 
 
 const Home =() => {
@@ -11,12 +11,14 @@ const Home =() => {
     const nameArray = ['k','u','n','t','e']
     const jobArray =['w','e','b',' ','d','e','v','e','l','o','p','e','r']
 
-    // TODO: Fix useEffect for bouncing letters min 40:50 in video
-    // useEffect(() => {
-    //     return setTimeout(() => {
-    //       setLetterClass('text-animate-hover')
-    //     }, 4000)
-    //   }, [])
+    useEffect(() => {
+        const timer = setTimeout(() => {
+          setLetterClass('text-animate-hover')
+        }, 3000)
+    
+        return () => clearTimeout(timer)
+      }, []) 
+    
 
     return (
         <div className='container home-page'>
