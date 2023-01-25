@@ -4,6 +4,7 @@ import './index.scss';
 import AnimatedLetters from '../AnimatedLetters';
 import { useState } from 'react'
 import { useEffect } from 'react';
+import Logo from './Logo';
 
 
 const Home =() => {
@@ -39,7 +40,7 @@ const Home =() => {
                 <h2>Junior Software Engineer / Project Managment </h2>
                 <Link to="/contact" className='flat-button'>CONTACT ME</Link>
             </div>
-            {/* <Logo/> */}
+            <Logo/>
         </div>
     )
 }
