@@ -15,10 +15,10 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault()
-  //  TODO: fix emailtoken
+  //  TODO: email submission issnt working at the moment
     emailjs
-      .sendForm('gmail', 'template_email', form.current, 'user_token')
-      .then(
+    .sendForm('default_service', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')      
+    .then(
         () => {
           alert('Message successfully sent!')
           window.location.reload(false)
@@ -26,7 +26,10 @@ const Contact = () => {
         () => {
           alert('Failed to send the message, please try again')
         }
-      )
+      ) 
+      .catch((error) => {
+        console.log(error)
+      })
   }
 
   return (
@@ -79,6 +82,15 @@ const Contact = () => {
               </ul>
             </form>
           </div>
+        </div>
+        <div className='info-map'>
+          Jenny Kunte, 
+          <br/>
+          United States
+          <br/>
+          Pike Place Market 7211, 98104 <br/>
+          Seattle, WA <br/>
+          <span>JennyKunte90@gmail.com</span>
         </div>
       </div>
       </>
