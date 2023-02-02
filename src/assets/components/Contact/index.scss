@@ -124,4 +124,13 @@
     height: 100%;
 
   }
+
+  .leaflet-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    opacity: 0;
+    animation: backInRight 1s 1,2s;
+    animation-fill-mode: forwards;
+  }
 }
