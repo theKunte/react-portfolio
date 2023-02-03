@@ -45,8 +45,7 @@ const Portfolio = () => {
                     strArray={['P','o','r','t','f','o','l','i','o',':']}
                     idx={15}/>
             </h1>
-            {/* TODO: fix renderPortfolio. Currently not displaying the image */}
-            {/* <div>{renderPortfolio(portfolioData)}</div> */}
+?            <div>{renderPortfolio(portfolioData.portfolio)}</div>
         </div>
     )
 }
