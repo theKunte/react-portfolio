@@ -30,6 +30,7 @@ const Portfolio = () => {
                                 className='portfolio-image'
                                 alt='portfolio'/>
                                 <div className="content">
+                                    {/* TODO: Title in portfolio is not displaying fix it :) */}
                                     <p className="title">{port.name}</p>
                                     <h4 className="description">{port.description}</h4>
                                     <button className="btn"

@@ -2,8 +2,14 @@
     "portfolio":[
         {
             "cover": "/portfolio/project1/one.png",
-            "title": "title",
-            "discription": "react, JSX SQL etc",
+            "title": "G",
+            "description": "React, JSX, AWS",
+            "url": "http://google.com"
+        },
+        {
+            "cover": "/portfolio/project1/one.png",
+            "title": "G",
+            "description": "React, JSX, AWS",
             "url": "http://google.com"
         }
     ]
