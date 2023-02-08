@@ -116,21 +116,18 @@
       color: #ffd700;
     }
   }
+}
 
+@media screen and (max-width: 1200px) {
+  // TODO: fix aling map to bottom
   .map-wrap {
-    background: rgba(8, 250, 215, 0.1);
-    float: right;
-    width: 53%;
-    height: 100%;
-
-  }
-
-  .leaflet-container {
+    float: none;
+    margin: 0;
     width: 100%;
-    height: 100%;
-    position: relative;
-    opacity: 0;
-    animation: backInRight 1s 1,2s;
-    animation-fill-mode: forwards;
+    height: 400px;
+  }
+  
+  .info-map {
+    display: none;
   }
 }
