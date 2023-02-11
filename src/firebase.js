@@ -1,7 +1,9 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+// import { getAnalytics } from "firebase/analytics";
 import {  getAuth, GoogleAuthProvider, signInWithPopup} from "firebase/auth"
-
+import { getStorage } from 'firebase/storage';
+import { getFirestore } from 'firebase/firestore/lite';
+ 
 const firebaseConfig = {
   apiKey: "AIzaSyD0Q02l84tqmlN3QMNijXRnWKXCELK6SPo",
   authDomain: "react-portfolio-dashboar-d3461.firebaseapp.com",
@@ -15,5 +17,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth();
 const provider = new GoogleAuthProvider();
+export const storage = getStorage(app);
+export const db = getFirestore(app);
+
 export const singInWithGoogle = () => signInWithPopup(auth, provider);
-const analytics = getAnalytics(app);
+// const analytics = getAnalytics(app);
