@@ -9,7 +9,6 @@
     h1.page-title {
         margin-left: 100px;
         margin-top: 100px;
-    
     }
 
     .images-container {
@@ -27,7 +26,7 @@
         border-radius: 10px;
         max-width: calc(25% - 10px);
 
-        .portfolio-image{
+        .portfolio-image {
             position: absolute;
             z-index: 2;
             width: 100%;
@@ -42,16 +41,16 @@
             padding: 10px 20px;
             transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
             background: linear-gradient(
-                100deg,
-                rgba(0,0,0,0.2) 0,
-                rgba(0,0,0,1)
+                180deg,
+                rgba(0, 0, 0, 0.2) 0,
+                rgba(0, 0, 0, 1)
             );
             bottom: -70px;
         }
 
         .title {
-            margin-top: 0;
             margin-bottom: 0;
+            margin-top: 0;
             color: #fff;
             font-size: 24px;
             font-weight: 500;
@@ -63,17 +62,17 @@
             margin-bottom: 5px;
             color: #fff;
             font-weight: 700;
-
         }
 
         .btn {
             margin-top: 30px;
             margin-bottom: 10px;
-            padding: 0 20px;
+            padding: 0 23px;
             height: 40px;
-            line-height: 35px;
-            border: 2px solid #fdd700;
+            line-height: 34px;
+            border: 2px solid #ffd700;
             border-radius: 4px;
+            font-size: 14px;
             color: #fff;
             background: transparent;
             text-transform: uppercase;
@@ -83,8 +82,8 @@
         }
 
         .btn:hover {
-            transform: translateY(-6px);
-            background: #fdd700;
+            transform: translateY(-3px);
+            background: #ffd700;
         }
 
         &:after {
