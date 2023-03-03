@@ -1,6 +1,6 @@
 .nav-bar {
-  background: #181818;
-  width: 65px;
+  background: #222629;
+  width: 80px;
   height: 100%;
   position: absolute;
   top: 0;
@@ -34,7 +34,7 @@
 
     a {
       font-size: 22px;
-      color: #4d4d4e;
+      color: #222629;
       display: block;
       line-height: 51px;
       height: 51px;
@@ -46,7 +46,7 @@
       }
 
       &:hover {
-        color: #ffd700;
+        color: #F7F9FB;
 
         svg {
           opacity: 0;
@@ -98,14 +98,14 @@
 
     a.active {
       svg {
-        color: #ffd700;
+        color: #F7F9FB;
       }
     }
   }
 
   ul {
     position: absolute;
-    bottom: 20px;
+    bottom: 25px;
     width: 100%;
     display: block;
     padding: 0;
@@ -119,12 +119,12 @@
         display: block;
         font-size: 15px;
         line-height: 16px;
-        color: #4d4d4e;
+        color: #F7F9FB;
       }
 
       &:hover {
         .anchor-icon {
-          color: #ffd700;
+          color: #222629;
         }
       }
     }
@@ -151,7 +151,7 @@
       width: 100%;
       top: 0;
       left: 0;
-      background: #181818;
+      background: #E3E2DF;
       height: 100%;
       margin: 0;
       z-index: 2;

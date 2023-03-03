@@ -27,15 +27,16 @@ const About = () => {
                     idx={15}/>
                 </h1>
                 <p>
-                    Recent graduate in Application Development looking for new opportunities in Tech Companies.
-                    I am very ambitious and excited to work with the latest technologies on interesting and diverse projects that improve
-                    our lifes
+                    Hi there! I am Jenny and I am original from Germany! Besides my passion for cooking food I love to code! 
+                    I graduated at NSC in Application Development and now I am looking for new opportunities in Industry.
+                    
                 </p>
                 <p  align="LEFT">
                     If I need to define myself in one sentence that would be world traveler, passionate baker, adventure hiker, photography enthusiast!
                 </p>
                 <p>
-                    Add some more.
+                    I wan't to make a difference in peoples lives and work hard to find solutions that have a meaningful impact on our lifes. 
+                    
                 </p>
 
             </div>
