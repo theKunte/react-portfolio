@@ -1,7 +1,6 @@
 .logo-container {
-    z-index: 0;
-    width: 400px;
-    height: 609px;
+    width: 500px;
+    height: 500px;
     position: absolute;
     top: 0;
     right: 15%;
@@ -9,25 +8,10 @@
     left: auto;
     margin: auto;
 
-    svg {
+    .profilePic {
         width: 100%;
-        height: auto;
+        height: 100%;
         bottom: 0;
-        transform:  rotateZ(30deg) !important;
-    }
-
-    .solid-logo {
-        position: absolute;
-        top: auto;
-        right: auto;
-        bottom: auto;
-        left: 0;
-        margin: auto;
-        width: 100%;
-        opacity: 0;
-        transform: rotateZ(30deg);
-        z-index: 1;
-
     }
 }
 
