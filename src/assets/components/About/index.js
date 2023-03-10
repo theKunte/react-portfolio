@@ -27,15 +27,23 @@ const About = () => {
                     idx={15}/>
                 </h1>
                 <p>
-                    Hi there! I am Jenny and I am original from Germany! Besides my passion for cooking food I love to code! 
-                    I graduated at NSC in Application Development and now I am looking for new opportunities in Industry.
-                    
+                    Hello! My name is Jenny, and I am a software engineer with a passion for solving complex problems and building elegant solutions. 
+                    I have worked on a variety of projects that have given me a deep understanding of software development principles and best practices.
+                    I earned my degree in Application Development from North Seattle College, where I honed my skills in programming, software design, and database management. 
+                    Since then, I have worked with a variety of programming languages, including Python, Java, and JavaScript, as well as various frameworks and tools such as React, and Node.js.
+                </p>
+                <p>
+                    My expierence are both frontend and backend development. I am well-versed in agile methodologies, and I am comfortable working in teams or independently.
+                    I am constantly learning and staying up to date with the latest technologies, trends, and best practices in software engineering.
+                    My focus is on building scalable and reliable software systems that meet the needs of businesses and users alike.
                 </p>
                 <p  align="LEFT">
                     If I need to define myself in one sentence that would be world traveler, passionate baker, adventure hiker, photography enthusiast!
                 </p>
                 <p>
                     I wan't to make a difference in peoples lives and work hard to find solutions that have a meaningful impact on our lifes. 
+                    Thank you for taking the time to learn more about me. I am always open to new opportunities and collaborations, so feel free to contact me if you would like to chat about software engineering or any other tech-related topics!.
+
                     
                 </p>
 
