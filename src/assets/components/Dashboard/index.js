@@ -17,8 +17,6 @@ const Dashboard = () => {
             }
         })
     }, []);
-
-
     return (
        <div>
            {user ? <Home /> : <Login />}

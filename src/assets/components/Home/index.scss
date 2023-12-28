@@ -25,7 +25,6 @@
             margin-top: -40px;
             left: 15px;
             opacity: 0.6;
-            
         }
 
         &::after{
@@ -83,8 +82,8 @@
 }
 
 @media screen and (max-width: 1200px){
-    .tags, 
-    .home-page h1::before, 
+    .tags,
+    .home-page h1::before,
     .home-page h1::after{
         display: none;
 
