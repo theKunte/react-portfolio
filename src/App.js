@@ -9,6 +9,7 @@ import Dashboard from './assets/components/Dashboard'
 
 function App() {
   return (
+    // TODO: fix Route. At the moment the page isnt loading again if you chance it to another page
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />

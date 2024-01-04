@@ -32,12 +32,12 @@ const About = () => {
             idx={15}
           />
         </h1>
+
         <p>
-          Hi there! I'm Jenny, a dedicated software engineer with a knack for
-          tackling intricate problems and crafting elegant solutions. Armed with
-          a degree in Application Development from North Seattle College, I've
-          garnered expertise in programming, software design, and database
-          management.
+          A dedicated software engineer with a knack for tackling intricate
+          problems and crafting elegant solutions. Armed with a degree in
+          Application Development from North Seattle College, I've garnered
+          expertise in programming, software design, and database management.
         </p>
         <p>
           My journey has led me to explore various programming languages such as
