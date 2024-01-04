@@ -1,5 +1,5 @@
 .nav-bar {
-  background: #222629;
+  background: #d52b6f;
   width: 80px;
   height: 100%;
   position: absolute;
@@ -33,8 +33,8 @@
     width: 100%;
 
     a {
-      font-size: 22px;
-      color: #222629;
+      font-size: 35px;
+      color: #ffffff;
       display: block;
       line-height: 51px;
       height: 51px;
@@ -46,7 +46,7 @@
       }
 
       &:hover {
-        color: #d6bd2c;
+        color: #2bc4d5;
 
         svg {
           opacity: 0;
@@ -98,7 +98,7 @@
 
     a.active {
       svg {
-        color: #F7F9FB;
+        color: #2bc4d5;
       }
     }
   }
@@ -119,22 +119,21 @@
         display: block;
         font-size: 15px;
         line-height: 16px;
-        color: #d6bd2c;
       }
 
       &:hover {
         .anchor-icon {
-          color: #d6bd2c;
+          color: #2bc4d5;
         }
       }
     }
   }
 }
 
-.hamburger-icon, .close-icon {
+.hamburger-icon,
+.close-icon {
   display: none;
 }
-
 
 @media screen and (max-width: 1200px) {
   .nav-bar {
@@ -143,16 +142,17 @@
     height: auto;
     min-height: auto;
 
-     ul, nav {
+    ul,
+    nav {
       display: none;
-     }
+    }
 
-     nav {
+    nav {
       width: 100%;
       top: 0;
       left: 0;
-      background: #E3E2DF;
-      height: 100%;
+      background: #d52b6f;
+      height: auto;
       margin: 0;
       z-index: 2;
       position: fixed;
@@ -171,20 +171,20 @@
         opacity: 1;
         position: initial;
         width: auto;
-        margin-left: 10PX;
+        margin-left: 10px;
       }
 
       a svg {
         opacity: 1 !important;
       }
-     }
+    }
 
-     .hamburger-icon,
-     .close-icon {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        display: block;
-     }
+    .hamburger-icon,
+    .close-icon {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      display: block;
+    }
   }
 }
