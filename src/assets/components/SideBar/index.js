@@ -1,7 +1,7 @@
 import './index.scss'
 import { Link, NavLink } from 'react-router-dom'
-import LogoSubtitle from '../../images/logo-jk.png'
-import LogoS from '../../images/logo-j.png'
+import LogoSubtitle from '../../images/logo-jknew.png'
+// import LogoS from '../../images/logo-j.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faHome,
@@ -22,8 +22,8 @@ const Sidebar = () => {
   return (
     <div className="nav-bar">
       <Link className="logo" to="/" onClick={() => setShowNav(false)}>
-        <img src={LogoS} alt="Logo" />
-        <img className="sub-logo" src={LogoSubtitle} alt="slobodan" />
+        {/* <img src={LogoS} alt="Logo" /> */}
+        <img className="sub-logo" src={LogoSubtitle} alt="JKunte" />
       </Link>
       <nav className={showNav ? 'mobile-show' : ''}>
         <NavLink
