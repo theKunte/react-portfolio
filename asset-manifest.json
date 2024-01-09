@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/https//theKunte.github.io/react-portfolio/static/css/main.fdd701f2.css",
-    "main.js": "/https//theKunte.github.io/react-portfolio/static/js/main.f4874acf.js",
-    "static/js/787.cf482a7c.chunk.js": "/https//theKunte.github.io/react-portfolio/static/js/787.cf482a7c.chunk.js",
-    "static/media/profile-j.png": "/https//theKunte.github.io/react-portfolio/static/media/profile-j.06520a68911404e549a5.png",
-    "static/media/logo-jknew.png": "/https//theKunte.github.io/react-portfolio/static/media/logo-jknew.248d717b6ffd232629a4.png",
-    "static/media/logo-j.png": "/https//theKunte.github.io/react-portfolio/static/media/logo-j.40f9a7753c7025bc3f79.png",
-    "static/media/helvetica-neu.ttf": "/https//theKunte.github.io/react-portfolio/static/media/helvetica-neu.8a19678078a6b21c8057.ttf",
-    "static/media/LaBelleAurore.woff2": "/https//theKunte.github.io/react-portfolio/static/media/LaBelleAurore.a83c1c58fd7e43972e4a.woff2",
-    "static/media/CoolveticaRg-Regular.woff2": "/https//theKunte.github.io/react-portfolio/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
-    "index.html": "/https//theKunte.github.io/react-portfolio/index.html",
-    "main.fdd701f2.css.map": "/https//theKunte.github.io/react-portfolio/static/css/main.fdd701f2.css.map",
-    "main.f4874acf.js.map": "/https//theKunte.github.io/react-portfolio/static/js/main.f4874acf.js.map",
-    "787.cf482a7c.chunk.js.map": "/https//theKunte.github.io/react-portfolio/static/js/787.cf482a7c.chunk.js.map"
+    "main.css": "/react-portfolio/static/css/main.302623b8.css",
+    "main.js": "/react-portfolio/static/js/main.54bd161c.js",
+    "static/js/787.cf482a7c.chunk.js": "/react-portfolio/static/js/787.cf482a7c.chunk.js",
+    "static/media/profile-j.png": "/react-portfolio/static/media/profile-j.06520a68911404e549a5.png",
+    "static/media/logo-jknew.png": "/react-portfolio/static/media/logo-jknew.248d717b6ffd232629a4.png",
+    "static/media/logo-j.png": "/react-portfolio/static/media/logo-j.40f9a7753c7025bc3f79.png",
+    "static/media/helvetica-neu.ttf": "/react-portfolio/static/media/helvetica-neu.8a19678078a6b21c8057.ttf",
+    "static/media/LaBelleAurore.woff2": "/react-portfolio/static/media/LaBelleAurore.a83c1c58fd7e43972e4a.woff2",
+    "static/media/CoolveticaRg-Regular.woff2": "/react-portfolio/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
+    "index.html": "/react-portfolio/index.html",
+    "main.302623b8.css.map": "/react-portfolio/static/css/main.302623b8.css.map",
+    "main.54bd161c.js.map": "/react-portfolio/static/js/main.54bd161c.js.map",
+    "787.cf482a7c.chunk.js.map": "/react-portfolio/static/js/787.cf482a7c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fdd701f2.css",
-    "static/js/main.f4874acf.js"
+    "static/css/main.302623b8.css",
+    "static/js/main.54bd161c.js"
   ]
 }
