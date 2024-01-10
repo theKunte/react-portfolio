@@ -34,23 +34,21 @@ const About = () => {
         </h1>
 
         <p>
-          A dedicated software engineer with a knack for tackling intricate
-          problems and crafting elegant solutions. Armed with a degree in
-          Application Development from North Seattle College, I've garnered
-          expertise in programming, software design, and database management.
+          <b>Hi there!</b>
+          <br></br> <br></br>I'm Jenny, a software engineer with a BA in
+          Application Development, combining a diverse journey from being a
+          nurturing nanny and meticulous project auditor to crafting the perfect
+          espresso. — my journey has shaped me into an unconventional software
+          engineer.
         </p>
         <p>
-          My journey has led me to explore various programming languages such as
-          Python, Java, and JavaScript, along with frameworks like React and
-          Node.js. I've successfully navigated both frontend and backend
-          development, demonstrating versatility in my approach.
+          From Lattes to Code! My academic background in Application Development
+          provides a solid foundation for my passion for problem-solving and
+          coding creativity. Check out some of my projects!
         </p>
         <p>
-          Proficient in agile methodologies, I thrive in collaborative
-          environments and bring a wealth of experience in delivering
-          high-quality software solutions. Always on the cutting edge, I stay
-          abreast of the latest technologies and best practices, ensuring my
-          work aligns with industry standards.
+          Why me? I thrive in collaborative environments and bring a wealth of
+          experience in delivering high-quality solutions.
         </p>
         <p align="LEFT">
           Beyond coding, I'm a world traveler, passionate baker, adventure

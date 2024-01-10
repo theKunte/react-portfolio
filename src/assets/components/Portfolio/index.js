@@ -62,7 +62,6 @@ const Portfolio = () => {
             idx={15}
           />
         </h1>
-        {/* //TODO: fix mobile view portfolio container */}
         <div>{renderPortfolio(portfolio)}</div>
       </div>
     </>

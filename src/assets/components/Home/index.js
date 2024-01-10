@@ -55,7 +55,10 @@ const Home = () => {
             idx={22}
           />
         </h1>
-        <h2>Junior Software Engineer / Project Managment </h2>
+        <h2>
+          From Espresso Artistry to Code Craftsmanship:<br></br> Brewing
+          Innovation with a BA in Application Development
+        </h2>
         <Link to="/contact" className="flat-button">
           CONTACT ME
         </Link>
