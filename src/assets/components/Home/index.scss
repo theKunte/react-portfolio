@@ -10,10 +10,11 @@
 
   h1 {
     color: #fff;
-    font-size: 53px;
+    font-size: 50px;
     margin: 0;
     font-family: 'Coolvetica';
     font-weight: 400;
+    margin-left: 10px;
 
     &::before {
       content: '<h1>';
@@ -55,6 +56,7 @@
     font-family: sans-serif;
     letter-spacing: 3px;
     animation: fadeIn 1s 1.8s backwards;
+    margin-left: 10px;
   }
 
   .flat-button {

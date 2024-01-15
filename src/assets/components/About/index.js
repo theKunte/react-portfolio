@@ -36,10 +36,9 @@ const About = () => {
         <p>
           <b>Hi there!</b>
           <br></br> <br></br>I'm Jenny, a software engineer with a BA in
-          Application Development, combining a diverse journey from being a
-          nurturing nanny and meticulous project auditor to crafting the perfect
-          espresso. — my journey has shaped me into an unconventional software
-          engineer.
+          Application Development, combining a diverse journey from being
+          meticulous project auditor to crafting the perfect espresso. — my
+          journey has shaped me into an unconventional software engineer.
         </p>
         <p>
           From Lattes to Code! My academic background in Application Development
