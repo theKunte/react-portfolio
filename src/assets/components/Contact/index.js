@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 
-
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const form = useRef()
@@ -17,10 +16,15 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault()
-  //  TODO: email submission issnt working at the moment
+    //  TODO: email submission issnt working at the moment
     emailjs
-    .sendForm('default_service', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')      
-    .then(
+      .sendForm(
+        'YOUR_SERVICE_ID',
+        'YOUR_TEMPLATE_ID',
+        form.current,
+        'YOUR_PUBLIC_KEY'
+      )
+      .then(
         () => {
           alert('Message successfully sent!')
           window.location.reload(false)
@@ -28,7 +32,7 @@ const Contact = () => {
         () => {
           alert('Failed to send the message, please try again')
         }
-      ) 
+      )
       .catch((error) => {
         console.log(error)
       })
@@ -46,9 +50,11 @@ const Contact = () => {
             />
           </h1>
           <p>
-            I am interested in entry level positions or any freelance opportunities to grow and learn. Feel free to reach out to me if you have questions or are interested in 
-            working with me fill out the contact form below
-            </p>
+            I am interested in entry level positions or any freelance
+            opportunities to grow and learn. Feel free to reach out to me if you
+            have questions or are interested in working with me fill out the
+            contact form below
+          </p>
           <div className="contact-form">
             <form ref={form} onSubmit={sendEmail}>
               <ul>
@@ -85,27 +91,26 @@ const Contact = () => {
             </form>
           </div>
         </div>
-        <div className='info-map'>
-          Jenny Kunte, 
-          <br/>
+        <div className="info-map">
+          Jenny Kunte,
+          <br />
           United States
-          <br/>
-          Pike Place Market 7211, 98104 <br/>
-          Seattle, WA <br/>
+          <br />
+          Pike Place Market 7211, 98104 <br />
+          Seattle, WA <br />
           <span>JennyKunte90@gmail.com</span>
         </div>
-        <div className='map-wrap'>
-        <MapContainer center={[47.609657,-122.342148]} zoom={13}>
+        <div className="map-wrap">
+          <MapContainer center={[47.609657, -122.342148]} zoom={13}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            <Marker position={[47.609657,-122.342148]}>
-            <Popup>Jenny lives here, come over for a cup of coffee!</Popup>
-          </Marker>
+            <Marker position={[47.609657, -122.342148]}>
+              <Popup>Jenny lives here, come over for a cup of coffee!</Popup>
+            </Marker>
           </MapContainer>
-
         </div>
       </div>
-      </>
-    )
+    </>
+  )
 }
 
 export default Contact
