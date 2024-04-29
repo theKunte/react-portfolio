@@ -19,10 +19,10 @@ const Contact = () => {
     //  TODO: email submission issnt working at the moment
     emailjs
       .sendForm(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
+        'service_3xapasg',
+        'template_0nnw9f8',
         form.current,
-        'YOUR_PUBLIC_KEY'
+        'kJg_dPRwJ0xJdMkVO'
       )
       .then(
         () => {
@@ -98,7 +98,7 @@ const Contact = () => {
           <br />
           Pike Place Market 7211, 98104 <br />
           Seattle, WA <br />
-          <span>JennyKunte90@gmail.com</span>
+          {/* <span>JennyKunte90@gmail.com</span> */}
         </div>
         <div className="map-wrap">
           <MapContainer center={[47.609657, -122.342148]} zoom={13}>
