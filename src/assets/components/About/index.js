@@ -61,8 +61,9 @@ const About = () => {
           Let's connect and explore exciting possibilities together!
         </p>
       </div>
+      <div className="cup"></div>
 
-      <div className="stage-cube-cont">
+      {/* <div className="stage-cube-cont">
         <div className="cubespinner">
           <div className="face1">
             <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
@@ -83,7 +84,7 @@ const About = () => {
             <FontAwesomeIcon icon={faPython} color="#28A4D9" />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
