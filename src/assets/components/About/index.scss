@@ -1,112 +1,88 @@
-.stage-cube-cont {
-  width: 50%;
-  height: 100%;
-  top: 0;
-  padding-top: 18%;
-  margin-left: 0;
-  position: absolute;
-  right: 0;
-  overflow: hidden;
-}
-h1,
-h2,
-h3 {
-  font-family: 'Montserrat', sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-p {
-  line-height: 1.3;
-  margin-bottom: 10px;
-  padding: 5px;
-  text-align: justify;
+.about-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-zone {
+  text-align: left;
 }
 
 .cup {
   height: 210px;
   width: 220px;
-  border: 10px solid #030303;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
+  border: 10px solid #c04a4a;
+  position: relative;
   border-radius: 20px 20px 60px 60px;
+  background: url('../../images/coffee-img-1.svg'),
+    url('../../images/coffee-img-2.svg');
+  background-position: 0 0, 0 0;
+  background-repeat: repeat-x;
+  animation: coffee 4s infinite linear;
 }
-.cup::before {
+
+@keyframes coffee {
+  100% {
+    background-position: -100% 0, -100% 0;
+  }
+}
+
+.cup:before {
   content: '';
   position: absolute;
   height: 80px;
   width: 60px;
-  border: 10px solid #303030;
+  border: 10px solid #c04a4a;
+  border-left: none;
+  right: -75px;
+  top: 30px;
+  border-radius: 0 30px 80px 0;
 }
 
-// .cubespinner {
-//   animation-name: spincube;
-//   animation-timing-function: ease-in-out;
-//   animation-iteration-count: infinite;
-//   animation-duration: 12s;
-//   transform-style: preserve-3d;
-//   transform-origin: 100px 100px 0;
-//   margin-left: calc(50% - 100px);
+.cup:after {
+  position: absolute;
+  content: '';
+  height: 10px;
+  width: 300px;
+  background-color: #c04a4a;
+  left: -45px;
+  bottom: -10px;
+  border-radius: 10px;
+}
 
-//   div {
-//     position: absolute;
-//     width: 200px;
-//     height: 200px;
-//     border: 1px solid #ccc;
-//     background: rgba(255, 254, 254, 0.4);
-//     font-size: 180px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     box-shadow: 0 0 20px 0px lightyellow;
-//   }
+.bubble {
+  height: 15px;
+  width: 15px;
+  background-color: #fbbe08;
+  border-radius: 50%;
+  position: absolute;
+  animation: bubbles forwards infinite;
+  opacity: 0.6;
+}
 
-//   .face1 {
-//     transform: translateZ(100px);
-//   }
-//   .face2 {
-//     transform: rotateY(90deg) translateZ(100px);
-//   }
-//   .face3 {
-//     transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
-//   }
-//   .face4 {
-//     transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
-//   }
-//   .face5 {
-//     transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
-//   }
-//   .face6 {
-//     transform: rotateX(-90deg) translateZ(100px);
-//   }
-// }
-// @keyframes spincube {
-//   from,
-//   to {
-//     transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-//   }
-//   16% {
-//     transform: rotateY(-90deg) rotateZ(90deg);
-//   }
-//   33% {
-//     transform: rotateY(-90deg) rotateX(90deg);
-//   }
-//   50% {
-//     transform: rotateY(-180deg) rotateZ(90deg);
-//   }
-//   66% {
-//     transform: rotateY(-270deg) rotateX(90deg);
-//   }
-//   83% {
-//     transform: rotateX(90deg);
-//   }
-// }
+@keyframes bubbles {
+  100% {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+}
 
-// @media screen and (max-width: 1200px) {
-//   .stage-cube-cont {
-//     position: initial;
-//     width: 100%;
-//     height: 0%;
-//     overflow: visible;
-//   }
-//}
+/* Media query for desktop view */
+@media (min-width: 780px) {
+  .about-page {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cup {
+    margin-left: 30%;
+    order: 1;
+  }
+}

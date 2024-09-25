@@ -1,15 +1,6 @@
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 import { useState, useEffect } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faReact,
-  faCss3,
-  faGitAlt,
-  faHtml5,
-  faJsSquare,
-  faPython,
-} from '@fortawesome/free-brands-svg-icons'
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -32,13 +23,14 @@ const About = () => {
             idx={15}
           />
         </h1>
-
         <p>
           <b>Hi there!</b>
-          <br></br> <br></br>I'm Jenny, a software engineer with a BA in
-          Application Development, combining a diverse journey from being
-          meticulous project auditor to crafting the perfect espresso. — my
-          journey has shaped me into an unconventional software engineer.
+          <br />
+          <br />
+          I'm Jenny, a software engineer with a BA in Application Development,
+          combining a diverse journey from being meticulous project auditor to
+          crafting the perfect espresso. — my journey has shaped me into an
+          unconventional software engineer.
         </p>
         <p>
           From Lattes to Code! My academic background in Application Development
@@ -61,30 +53,8 @@ const About = () => {
           Let's connect and explore exciting possibilities together!
         </p>
       </div>
-      <div className="cup"></div>
 
-      {/* <div className="stage-cube-cont">
-        <div className="cubespinner">
-          <div className="face1">
-            <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
-          </div>
-          <div className="face2">
-            <FontAwesomeIcon icon={faHtml5} color="#F06529" />
-          </div>
-          <div className="face3">
-            <FontAwesomeIcon icon={faCss3} color="#28A4D9" />
-          </div>
-          <div className="face4">
-            <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
-          </div>
-          <div className="face5">
-            <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
-          </div>
-          <div className="face6">
-            <FontAwesomeIcon icon={faPython} color="#28A4D9" />
-          </div>
-        </div>
-      </div> */}
+      <div className="cup"></div>
     </div>
   )
 }
