@@ -134,4 +134,10 @@
       margin-bottom: 5%;
     }
   }
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
 }
