@@ -19,42 +19,59 @@ const About = () => {
         <h1>
           <AnimatedLetters
             letterClass={letterClass}
-            strArray={['Passionate Software Engineer:']}
+            strArray={['About Me']}
             idx={15}
           />
         </h1>
         <p>
-          <b>Hi there!</b>
-          <br />
-          <br />
-          I'm Jenny, a software engineer with a BA in Application Development,
-          combining a diverse journey from being meticulous project auditor to
-          crafting the perfect espresso. — my journey has shaped me into an
-          unconventional software engineer.
+          <strong>Hi! I'm Jenny</strong> — a former project auditor turned
+          software engineer with a deep love for crafting solutions that matter.
+          My path into tech wasn’t linear, and that’s what makes it powerful.
         </p>
+
         <p>
-          From Lattes to Code! My academic background in Application Development
-          provides a solid foundation for my passion for problem-solving and
-          coding creativity. Check out some of my projects!
+          I began in corporate project auditing, where precision, communication,
+          and structure were everything. At the same time, I started my journey
+          of becoming a software engineer for something more creative and
+          impactful. I started learning application development at NSC.
         </p>
+
         <p>
-          Why me? I thrive in collaborative environments and bring a wealth of
-          experience in delivering high-quality solutions.
+          Fast forward to today — I hold a BA in Application Development and
+          spend my days turning ideas into functional, elegant software. I
+          specialize in writing clean code, building intuitive UIs, and
+          collaborating with teams to bring digital products to life.
         </p>
-        <p align="LEFT">
-          Beyond coding, I'm a world traveler, passionate baker, adventure
-          hiker, and photography enthusiast! If I had to define myself in one
-          sentence, that would be it.
-        </p>
+
         <p>
-          I'm driven by the desire to make a positive impact on people's lives
-          through technology. Eager for new challenges and collaborations, I'm
-          open to discussing anything related to software engineering or tech.
-          Let's connect and explore exciting possibilities together!
+          Whether I’m contributing to a frontend feature, optimizing backend
+          logic, or tinkering with animations (like this cup of coffee 🍵), I
+          bring passion, persistence, and a detail-oriented mindset to
+          everything I do.
         </p>
+
+        <p>
+          Outside of code, I’m an adventure hiker, avid baker, world traveler,
+          and amateur photographer. These experiences help fuel my creativity
+          and balance.
+        </p>
+
+        <p>
+          <strong>
+            I’m always excited to meet new collaborators or take on challenges.
+          </strong>
+          Where technology makes life better. Let’s connect — I’d love to hear
+          your story too.
+        </p>
+        <br></br>
       </div>
 
-      <div className="cup"></div>
+      <div className="cup">
+        <div className="steam steam-1"></div>
+        <div className="steam steam-2"></div>
+        <div className="steam steam-3"></div>
+        <div className="steam steam-4"></div>
+      </div>
     </div>
   )
 }

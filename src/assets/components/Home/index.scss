@@ -16,28 +16,6 @@
     font-weight: 400;
     margin-left: 10px;
 
-    &::before {
-      content: '<h1>';
-      font-family: 'La Belle Aurore';
-      color: #f7f9fb;
-      font-size: 18px;
-      position: absolute;
-      margin-top: -40px;
-      left: 15px;
-      opacity: 0.6;
-    }
-
-    &::after {
-      content: '<h1/>';
-      font-family: 'La Belle Aurore';
-      color: #f7f9fb;
-      font-size: 18px;
-      position: absolute;
-      margin-top: 18px;
-      margin-left: 20px;
-      animation: fadeIn 1s 1.7s backwards;
-      opacity: 0.6;
-    }
     img {
       width: 32px;
       margin-left: 32px;
