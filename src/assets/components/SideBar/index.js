@@ -23,34 +23,31 @@ const Sidebar = () => {
       <Link className="logo" to="/" onClick={() => setShowNav(false)}></Link>
       <nav className={showNav ? 'mobile-show' : ''}>
         <NavLink
-          exact="true"
-          activeclassname="active"
           to="/"
           onClick={() => setShowNav(false)}
+          className={({ isActive }) => (isActive ? 'active' : '')}
         >
           <FontAwesomeIcon icon={faHome} color={iconColor} />
         </NavLink>
+
         <NavLink
-          activeclassname="active"
-          className="about-link"
           to="/about"
           onClick={() => setShowNav(false)}
+          className={({ isActive }) => (isActive ? 'active' : '')}
         >
           <FontAwesomeIcon icon={faUser} color={iconColor} />
         </NavLink>
         <NavLink
-          activeclassname="active"
-          className="portfolio-link"
           to="/portfolio"
           onClick={() => setShowNav(false)}
+          className={({ isActive }) => (isActive ? 'active' : '')}
         >
           <FontAwesomeIcon icon={faSuitcase} color={iconColor} />
         </NavLink>
         <NavLink
-          activeclassname="active"
-          className="contact-link"
           to="/contact"
           onClick={() => setShowNav(false)}
+          className={({ isActive }) => (isActive ? 'active' : '')}
         >
           <FontAwesomeIcon icon={faEnvelope} color={iconColor} />
         </NavLink>
