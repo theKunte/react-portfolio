@@ -1,6 +1,5 @@
 import './index.scss'
-import { Link, NavLink } from 'react-router-dom'
-// import LogoS from '../../images/logo-j.png'
+import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faHome,
@@ -13,58 +12,70 @@ import {
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { useState } from 'react'
 
-const Sidebar = () => {
+const Navbar = () => {
   const [showNav, setShowNav] = useState(false)
 
   const iconColor = '#e2fcff'
 
   return (
     <div className="nav-bar">
-      <Link className="logo" to="/" onClick={() => setShowNav(false)}></Link>
       <nav className={showNav ? 'mobile-show' : ''}>
-        <NavLink
-          to="/"
-          onClick={() => setShowNav(false)}
-          className={({ isActive }) => (isActive ? 'active' : '')}
-        >
-          <FontAwesomeIcon icon={faHome} color={iconColor} />
-        </NavLink>
-
-        <NavLink
-          to="/about"
-          onClick={() => setShowNav(false)}
-          className={({ isActive }) => (isActive ? 'active' : '')}
-        >
-          <FontAwesomeIcon icon={faUser} color={iconColor} />
-        </NavLink>
-        <NavLink
-          to="/portfolio"
-          onClick={() => setShowNav(false)}
-          className={({ isActive }) => (isActive ? 'active' : '')}
-        >
-          <FontAwesomeIcon icon={faSuitcase} color={iconColor} />
-        </NavLink>
-        <NavLink
-          to="/contact"
-          onClick={() => setShowNav(false)}
-          className={({ isActive }) => (isActive ? 'active' : '')}
-        >
-          <FontAwesomeIcon icon={faEnvelope} color={iconColor} />
-        </NavLink>
+        <div className={showNav ? 'nav-icons-center' : ''}>
+          <NavLink
+            to="/"
+            onClick={() => setShowNav(false)}
+            className={({ isActive }) => (isActive ? 'active' : '')}
+            aria-label="Home"
+            title="Home"
+          >
+            <FontAwesomeIcon icon={faHome} color={iconColor} />
+          </NavLink>
+          <NavLink
+            to="/about"
+            onClick={() => setShowNav(false)}
+            className={({ isActive }) => (isActive ? 'active' : '')}
+            aria-label="About"
+            title="About"
+          >
+            <FontAwesomeIcon icon={faUser} color={iconColor} />
+          </NavLink>
+          <NavLink
+            to="/portfolio"
+            onClick={() => setShowNav(false)}
+            className={({ isActive }) => (isActive ? 'active' : '')}
+            aria-label="Portfolio"
+            title="Portfolio"
+          >
+            <FontAwesomeIcon icon={faSuitcase} color={iconColor} />
+          </NavLink>
+          <NavLink
+            to="/contact"
+            onClick={() => setShowNav(false)}
+            className={({ isActive }) => (isActive ? 'active' : '')}
+            aria-label="Contact"
+            title="Contact"
+          >
+            <FontAwesomeIcon icon={faEnvelope} color={iconColor} />
+          </NavLink>
+        </div>
         <FontAwesomeIcon
           onClick={() => setShowNav(false)}
           icon={faClose}
           color="#ffd700"
           size="3x"
           className="close-icon"
+          aria-label="Close navigation"
+          title="Close navigation"
         />
       </nav>
-      <ul>
+      <ul className="social-links">
         <li>
           <a
             href="https://www.linkedin.com/in/jenny-kunte-seattle/"
             target="_blank"
             rel="noreferrer"
+            aria-label="LinkedIn"
+            title="LinkedIn"
           >
             <FontAwesomeIcon
               icon={faLinkedin}
@@ -78,12 +89,17 @@ const Sidebar = () => {
             href="https://github.com/theKunte"
             target="_blank"
             rel="noreferrer"
+            aria-label="GitHub"
+            title="GitHub"
+            style={{ display: 'flex', alignItems: 'center', gap: '6px' }}
           >
             <FontAwesomeIcon
               icon={faGithub}
               color={iconColor}
               className={'anchor-icon'}
+              style={{ minWidth: '20px', minHeight: '20px' }}
             />
+            <span className="sr-only">GitHub</span>
           </a>
         </li>
       </ul>
@@ -93,9 +109,11 @@ const Sidebar = () => {
         color={iconColor}
         size="3x"
         className="hamburger-icon"
+        aria-label="Open navigation"
+        title="Open navigation"
       />
     </div>
   )
 }
 
-export default Sidebar
+export default Navbar

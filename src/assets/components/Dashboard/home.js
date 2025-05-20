@@ -61,7 +61,7 @@ const Home = () => {
   }
 
   return (
-    <div className="dashboard">
+    <div className="dashboard" style={{ paddingLeft: '80px', boxSizing: 'border-box' }}>
       <form ref={form} onSubmit={submitPortfolio}>
         <p>
           <input type="text" placeholder="Name" />

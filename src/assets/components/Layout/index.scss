@@ -1,7 +1,9 @@
 .page {
   width: 100%;
-  height: 100%;
-  position: absolute;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .top-tags {
@@ -25,17 +27,17 @@
 
 .container {
   width: 100%;
-  will-change: contents;
-  height: 90%;
-  min-height: 566px;
-  position: absolute;
-  opacity: 0;
-  top: 5%;
+  min-height: 100vh;
+  position: relative;
+  opacity: 1;
+  top: 0;
   margin: 0 auto;
   z-index: 1;
   transform-style: preserve-3d;
   animation: fadeIn 1s forwards;
   animation-delay: 1s;
+  padding: 60px 0 60px 0;
+  box-sizing: border-box;
 }
 
 .container.contact-page,
@@ -71,14 +73,15 @@
   }
 
   .text-zone {
-    position: absolute;
-    left: 10%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 35%;
-    vertical-align: middle;
-    display: table-cell;
-    max-height: 90%;
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    width: 100%;
+    display: block;
+    max-height: none;
+    padding: 0 20px;
+    box-sizing: border-box;
   }
 
   .text-animate-hover {
@@ -90,13 +93,14 @@
 
 @media screen and (max-width: 1200px) {
   .page {
-    position: initial;
+    position: relative;
   }
 
   .container {
-    position: initial;
+    position: relative;
     height: auto;
-    min-height: auto;
+    min-height: 60vh;
+    padding: 40px 0;
 
     &.contact-page,
     &.about-page,
