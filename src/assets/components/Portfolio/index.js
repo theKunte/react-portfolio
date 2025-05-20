@@ -13,11 +13,8 @@ const Portfolio = () => {
     const timer = setTimeout(() => {
       setLetterClass('text-animate-hover')
     }, 3000)
-
-    return () => {
-      clearTimeout(timer)
-    }
-  })
+    return () => clearTimeout(timer)
+  }, [])
 
   useEffect(() => {
     getPortfolio()
@@ -30,42 +27,49 @@ const Portfolio = () => {
 
   const renderPortfolio = (portfolio) => {
     return (
-      <div className="images-container">
-        {portfolio.map((port, idx) => {
-          return (
-            <div className="image-box" key={idx}>
+      <div className="portfolio-grid">
+        {portfolio.map((port, idx) => (
+          <div className="portfolio-card" key={idx}>
+            <div className="portfolio-image-wrapper">
               <img
                 src={port.image}
                 className="portfolio-image"
-                alt="portfolio"
+                alt={port.name || 'portfolio'}
               />
-              <div className="content">
-                <p className="title">{port.name}</p>
-                <h4 className="description">{port.description}</h4>
-                <h4 className="info">{port.info}</h4>
-                <button className="btn" onClick={() => window.open(port.url)}>
-                  View
-                </button>
-              </div>
             </div>
-          )
-        })}
+            <div className="portfolio-content">
+              <h2 className="portfolio-title">{port.name}</h2>
+              <p className="portfolio-description">{port.description}</p>
+              {port.info && <p className="portfolio-info">{port.info}</p>}
+              <a
+                className="portfolio-btn"
+                href={port.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Project
+              </a>
+            </div>
+          </div>
+        ))}
       </div>
     )
   }
+
   return (
-    <>
-      <div className="container portfolio-page">
-        <h1 className="page-title">
-          <AnimatedLetters
-            letterClass={letterClass}
-            strArray={'Portfolio:'.split('')}
-            idx={15}
-          />
-        </h1>
-        <div>{renderPortfolio(portfolio)}</div>
-      </div>
-    </>
+    <div className="container portfolio-page">
+      <h1 className="page-title">
+        <AnimatedLetters
+          letterClass={letterClass}
+          strArray={'Portfolio:'.split('')}
+          idx={19}
+        />
+      </h1>
+      <p className="portfolio-intro">
+        Here are some of my recent projects. Click on any to learn more or view the live site/code.
+      </p>
+      {renderPortfolio(portfolio)}
+    </div>
   )
 }
 
