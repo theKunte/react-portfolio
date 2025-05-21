@@ -20,13 +20,14 @@ const Navbar = () => {
   return (
     <div className="nav-bar">
       <nav className={showNav ? 'mobile-show' : ''}>
-        <div className={showNav ? 'nav-icons-center' : ''}>
+        <div className={showNav ? 'nav-icons-center' : 'nav-icons-row'}>
           <NavLink
             to="/"
             onClick={() => setShowNav(false)}
             className={({ isActive }) => (isActive ? 'active' : '')}
             aria-label="Home"
             title="Home"
+            style={{ marginRight: '32px' }}
           >
             <FontAwesomeIcon icon={faHome} color={iconColor} />
           </NavLink>
@@ -36,6 +37,7 @@ const Navbar = () => {
             className={({ isActive }) => (isActive ? 'active' : '')}
             aria-label="About"
             title="About"
+            style={{ marginRight: '32px' }}
           >
             <FontAwesomeIcon icon={faUser} color={iconColor} />
           </NavLink>
@@ -45,6 +47,7 @@ const Navbar = () => {
             className={({ isActive }) => (isActive ? 'active' : '')}
             aria-label="Portfolio"
             title="Portfolio"
+            style={{ marginRight: '32px' }}
           >
             <FontAwesomeIcon icon={faSuitcase} color={iconColor} />
           </NavLink>
@@ -54,9 +57,29 @@ const Navbar = () => {
             className={({ isActive }) => (isActive ? 'active' : '')}
             aria-label="Contact"
             title="Contact"
+            style={{ marginRight: '32px' }}
           >
             <FontAwesomeIcon icon={faEnvelope} color={iconColor} />
           </NavLink>
+          <a
+            href="https://www.linkedin.com/in/jenny-kunte-seattle/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+            title="LinkedIn"
+            style={{ marginRight: '32px' }}
+          >
+            <FontAwesomeIcon icon={faLinkedin} color={iconColor} />
+          </a>
+          <a
+            href="https://github.com/theKunte"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <FontAwesomeIcon icon={faGithub} color={iconColor} />
+          </a>
         </div>
         <FontAwesomeIcon
           onClick={() => setShowNav(false)}
@@ -68,41 +91,6 @@ const Navbar = () => {
           title="Close navigation"
         />
       </nav>
-      <ul className="social-links">
-        <li>
-          <a
-            href="https://www.linkedin.com/in/jenny-kunte-seattle/"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="LinkedIn"
-            title="LinkedIn"
-          >
-            <FontAwesomeIcon
-              icon={faLinkedin}
-              color={iconColor}
-              className="anchor-icon"
-            />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://github.com/theKunte"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="GitHub"
-            title="GitHub"
-            style={{ display: 'flex', alignItems: 'center', gap: '6px' }}
-          >
-            <FontAwesomeIcon
-              icon={faGithub}
-              color={iconColor}
-              className={'anchor-icon'}
-              style={{ minWidth: '20px', minHeight: '20px' }}
-            />
-            <span className="sr-only">GitHub</span>
-          </a>
-        </li>
-      </ul>
       <FontAwesomeIcon
         onClick={() => setShowNav(true)}
         icon={faBars}

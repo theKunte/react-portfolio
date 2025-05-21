@@ -1,11 +1,11 @@
 import './index.scss'
-import Sidebar from '../SideBar'
+import NavBar from '../NavBar'
 import { Outlet } from 'react-router-dom'
 
 const Layout = () => {
   return (
     <div className="App">
-      <Sidebar />
+      <NavBar />
       <div className="page">
         <Outlet />
       </div>

@@ -110,7 +110,7 @@
   align-self: stretch;
   background: rgba(8, 253, 216, 0.08);
   border-radius: 0 12px 12px 0;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   display: flex;
   align-items: stretch;
@@ -180,7 +180,8 @@
     flex-direction: column;
     gap: 24px;
   }
-  .text-zone, .map-wrap {
+  .text-zone,
+  .map-wrap {
     max-width: 100%;
     min-width: 0;
     padding-right: 0;
@@ -205,14 +206,16 @@
     flex-direction: column;
     min-height: 0;
   }
-  .text-zone, .map-wrap {
+  .text-zone,
+  .map-wrap {
     max-width: 100%;
     min-width: 0;
     padding: 24px 0;
     height: 320px;
     border-radius: 12px;
   }
-  .map-wrap, .leaflet-container {
+  .map-wrap,
+  .leaflet-container {
     min-height: 220px;
     height: 260px;
     border-radius: 12px;
