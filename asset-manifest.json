@@ -1,10 +1,9 @@
 {
   "files": {
-    "main.css": "/react-portfolio/static/css/main.e01c5a03.css",
-    "main.js": "/react-portfolio/static/js/main.7dd63416.js",
+    "main.css": "/react-portfolio/static/css/main.66a929f7.css",
+    "main.js": "/react-portfolio/static/js/main.6459d913.js",
     "static/js/787.cf482a7c.chunk.js": "/react-portfolio/static/js/787.cf482a7c.chunk.js",
-    "static/media/profile-j.png": "/react-portfolio/static/media/profile-j.06520a68911404e549a5.png",
-    "static/media/logo-jknew.png": "/react-portfolio/static/media/logo-jknew.248d717b6ffd232629a4.png",
+    "static/media/profile-j.png": "/react-portfolio/static/media/profile-j.9417f3ffe0f9daef0b21.png",
     "static/media/logo-j.png": "/react-portfolio/static/media/logo-j.40f9a7753c7025bc3f79.png",
     "static/media/helvetica-neu.ttf": "/react-portfolio/static/media/helvetica-neu.8a19678078a6b21c8057.ttf",
     "static/media/LaBelleAurore.woff2": "/react-portfolio/static/media/LaBelleAurore.a83c1c58fd7e43972e4a.woff2",
@@ -12,12 +11,12 @@
     "index.html": "/react-portfolio/index.html",
     "static/media/coffee-img-2.svg": "/react-portfolio/static/media/coffee-img-2.a5deed5424d0a211f851.svg",
     "static/media/coffee-img-1.svg": "/react-portfolio/static/media/coffee-img-1.de44acee1e10a916bf13.svg",
-    "main.e01c5a03.css.map": "/react-portfolio/static/css/main.e01c5a03.css.map",
-    "main.7dd63416.js.map": "/react-portfolio/static/js/main.7dd63416.js.map",
+    "main.66a929f7.css.map": "/react-portfolio/static/css/main.66a929f7.css.map",
+    "main.6459d913.js.map": "/react-portfolio/static/js/main.6459d913.js.map",
     "787.cf482a7c.chunk.js.map": "/react-portfolio/static/js/787.cf482a7c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e01c5a03.css",
-    "static/js/main.7dd63416.js"
+    "static/css/main.66a929f7.css",
+    "static/js/main.6459d913.js"
   ]
 }
