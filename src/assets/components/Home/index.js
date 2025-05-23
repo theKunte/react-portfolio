@@ -18,9 +18,14 @@ const Home = () => {
             From Espresso Artistry to Code Craftsmanship:<br />
             Brewing Innovation with a BA in Application Development
           </div>
-          <Link to="/contact" className="flat-button">
-            CONTACT ME
-          </Link>
+          <div className="button-row">
+            <Link to="/contact" className="flat-button">
+              CONTACT ME
+            </Link>
+            <Link to="/portfolio" className="flat-button alt">
+              PROJECTS
+            </Link>
+          </div>
         </div>
       </div>
     </div>

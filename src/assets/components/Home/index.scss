@@ -130,6 +130,26 @@
   }
 }
 
+.flat-button.alt {
+  background: #fbbe08;
+  color: #222;
+  border: none;
+  &:hover {
+    background: #c04a4a;
+    color: #fff;
+  }
+}
+
+.button-row {
+  display: flex;
+  gap: 16px;
+  margin-left: 8px;
+  @media (max-width: 900px) {
+    justify-content: center;
+    margin-left: 0;
+  }
+}
+
 .profilePic {
   width: 320px;
   height: 320px;
