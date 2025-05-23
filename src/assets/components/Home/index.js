@@ -1,69 +1,28 @@
-import LogoTitle from '../../images/logo-j.png'
 import { Link } from 'react-router-dom'
 import './index.scss'
-import AnimatedLetters from '../AnimatedLetters'
-import { useState } from 'react'
-import { useEffect } from 'react'
-import Logo from './Logo'
+import ProfileJ from '../../images/profile-j.png'
 
 const Home = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
-  const nameArray = ['e', 'n', 'n', 'y', ' ', 'K', 'u', 'n', 't', 'e']
-  const jobArray = [
-    'w',
-    'e',
-    'b',
-    ' ',
-    'd',
-    'e',
-    'v',
-    'e',
-    'l',
-    'o',
-    'p',
-    'e',
-    'r',
-  ]
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 3000)
-
-    return () => clearTimeout(timer)
-  }, [])
-
   return (
-    <div className="container home-page">
-      <div className="text-zone">
-        <h1>
-          <span className={letterClass}>H</span>
-          <span className={`${letterClass} _12`}>i,</span>
-          <br />
-          <span className={`${letterClass} _13`}>I</span>
-          <span className={`${letterClass} _14`}>'m</span>
-          <img src={LogoTitle} alt="developer" />
-          <AnimatedLetters
-            letterClass={letterClass}
-            strArray={nameArray}
-            idx={15}
-          />
-          <br />
-          <AnimatedLetters
-            letterClass={letterClass}
-            strArray={jobArray}
-            idx={22}
-          />
-        </h1>
-        <h2>
-          From Espresso Artistry to Code Craftsmanship:<br></br> Brewing
-          Innovation with a BA in Application Development
-        </h2>
-        <Link to="/contact" className="flat-button">
-          CONTACT ME
-        </Link>
+    <div className="home-main-layout">
+      <div className="home-left">
+        <img className="profilePic" src={ProfileJ} alt="Profile" />
       </div>
-      <Logo />
+      <div className="home-right">
+        <div className="text-zone">
+          <h1 className="main-title">
+            Hi, I'm <span className="name">Jenny Kunte</span>
+          </h1>
+          <h2 className="job-title">Web Developer</h2>
+          <div className="subtitle">
+            From Espresso Artistry to Code Craftsmanship:<br />
+            Brewing Innovation with a BA in Application Development
+          </div>
+          <Link to="/contact" className="flat-button">
+            CONTACT ME
+          </Link>
+        </div>
+      </div>
     </div>
   )
 }
