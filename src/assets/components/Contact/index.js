@@ -1,115 +1,44 @@
 import './index.scss'
-import AnimatedLetters from '../AnimatedLetters'
-import { useState, useEffect, useRef } from 'react'
-import emailjs from '@emailjs/browser'
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { useRef } from 'react'
 
 const Contact = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
   const form = useRef()
 
-  useEffect(() => {
-    return setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 3000)
-  }, [])
-
-  const sendEmail = (e) => {
-    e.preventDefault()
-    //  TODO: email submission issnt working at the moment
-    emailjs
-      .sendForm(
-        'service_3xapasg',
-        'template_0nnw9f8',
-        form.current,
-        'kJg_dPRwJ0xJdMkVO'
-      )
-      .then(
-        () => {
-          alert('Message successfully sent!')
-          window.location.reload(false)
-        },
-        () => {
-          alert('Failed to send the message, please try again')
-        }
-      )
-      .catch((error) => {
-        console.log(error)
-      })
-  }
-
   return (
-    <>
-      <div className="container contact-page">
-        <div className="text-zone">
-          <h1>
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'm', 'e']}
-              idx={15}
-            />
-          </h1>
-          <p>
-            I am interested in entry level positions or any freelance
-            opportunities to grow and learn. Feel free to reach out to me if you
-            have questions or are interested in working with me fill out the
-            contact form below
-          </p>
-          <div className="contact-form">
-            <form ref={form} onSubmit={sendEmail}>
-              <ul>
-                <li className="half">
-                  <input placeholder="Name" type="text" name="name" required />
-                </li>
-                <li className="half">
-                  <input
-                    placeholder="Email"
-                    type="email"
-                    name="email"
-                    required
-                  />
-                </li>
-                <li>
-                  <input
-                    placeholder="Subject"
-                    type="text"
-                    name="subject"
-                    required
-                  />
-                </li>
-                <li>
-                  <textarea
-                    placeholder="Message"
-                    name="message"
-                    required
-                  ></textarea>
-                </li>
-                <li>
-                  <input type="submit" className="flat-button" value="SEND" />
-                </li>
-              </ul>
-            </form>
-          </div>
-        </div>
-        <div className="info-map">
-          Jenny Kunte,
-          <br />
-          United States
-          <br />
-          Pike Place Market 7211, 98104 <br />
-          Seattle, WA <br />
-          {/* <span>JennyKunte90@gmail.com</span> */}
-        </div>
+    <div className="contact-main-layout">
+      <div className="contact-left">
         <div className="map-wrap">
-          <MapContainer center={[47.609657, -122.342148]} zoom={13}>
-            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            <Marker position={[47.609657, -122.342148]}>
-              <Popup>Jenny lives here, come over for a cup of coffee!</Popup>
-            </Marker>
-          </MapContainer>
+          <iframe
+            title="Google Map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.523040672693!2d-122.3351676843696!3d47.60801397918537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906abedb6e7b0b%3A0x7e3b0e3b0e3b0e3b!2sSeattle%2C%20WA!5e0!3m2!1sen!2sus!4v1620240000000!5m2!1sen!2sus"
+            width="100%"
+            height="100%"
+            style={{ border: 0, minHeight: '420px', borderRadius: '12px' }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
-    </>
+      <div className="contact-right">
+        <div className="contact-text-zone">
+          <h1 className="contact-title">Contact</h1>
+          <div className="contact-subtitle">
+            Let's connect! Fill out the form and I'll get back to you soon.
+          </div>
+          <form ref={form} className="contact-form">
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <textarea name="message" placeholder="Message" required />
+            <div className="button-row">
+              <button type="submit" className="flat-button">
+                Send
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   )
 }
 
