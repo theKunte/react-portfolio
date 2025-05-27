@@ -66,7 +66,8 @@ const Portfolio = () => {
         />
       </h1>
       <p className="portfolio-intro">
-        Here are some of my recent projects. Click on any to learn more or view the live site/code.
+        Here are some of my recent projects. Click on any to learn more or view
+        the live site/code.
       </p>
       {renderPortfolio(portfolio)}
     </div>

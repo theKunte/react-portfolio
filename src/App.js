@@ -32,6 +32,7 @@ function App() {
         <section id="home" data-scroll-section>
           <Home />
         </section>
+
         <section id="portfolio" data-scroll-section>
           <Portfolio />
         </section>

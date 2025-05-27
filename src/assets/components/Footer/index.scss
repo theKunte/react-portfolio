@@ -33,13 +33,19 @@
 
 .footer-social {
   display: flex;
-  gap: 18px;
+  gap: 12px;
+  margin-top: 8px;
   .footer-icon {
-    font-size: 2rem;
+    font-size: 1.3rem;
     color: #fbbe08;
     transition: color 0.2s;
+    padding: 6px;
+    margin: 0 2px;
+    border-radius: 50%;
+    background: transparent;
     &:hover {
       color: #fff;
+      background: #fbbe08;
     }
   }
 }

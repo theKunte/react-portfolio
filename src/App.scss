@@ -21,3 +21,57 @@ input,
 textarea {
   font-family: 'Helvetica Neue';
 }
+
+.scroll-main-layout {
+  min-height: 100vh;
+  width: 100vw;
+  background: #f7f9fb;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  scroll-behavior: smooth;
+}
+
+[data-scroll-section] {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// Remove extra padding/margin from all main layout children for consistency
+section[data-scroll-section] > * {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+// Make sure Footer and NavBar are full width and visually separated
+footer, .footer {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #eaeaea;
+}
+
+nav, .navbar {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+body {
+  background: #f7f9fb;
+  font-family: 'Lato', Arial, sans-serif;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
