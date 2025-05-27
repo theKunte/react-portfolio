@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faHome,
-  faUser,
   faEnvelope,
   faSuitcase,
   faBars,
@@ -31,16 +30,7 @@ const Navbar = () => {
           >
             <FontAwesomeIcon icon={faHome} color={iconColor} />
           </NavLink>
-          <NavLink
-            to="/about"
-            onClick={() => setShowNav(false)}
-            className={({ isActive }) => (isActive ? 'active' : '')}
-            aria-label="About"
-            title="About"
-            style={{ marginRight: '32px' }}
-          >
-            <FontAwesomeIcon icon={faUser} color={iconColor} />
-          </NavLink>
+
           <NavLink
             to="/portfolio"
             onClick={() => setShowNav(false)}
