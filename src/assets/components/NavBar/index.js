@@ -1,5 +1,4 @@
 import './index.scss'
-import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faHome,
@@ -13,44 +12,39 @@ import { useState } from 'react'
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false)
-
   const iconColor = '#e2fcff'
 
   return (
     <div className="nav-bar">
       <nav className={showNav ? 'mobile-show' : ''}>
         <div className={showNav ? 'nav-icons-center' : 'nav-icons-row'}>
-          <NavLink
-            to="/"
+          <a
+            href="#home"
             onClick={() => setShowNav(false)}
-            className={({ isActive }) => (isActive ? 'active' : '')}
             aria-label="Home"
             title="Home"
             style={{ marginRight: '32px' }}
           >
             <FontAwesomeIcon icon={faHome} color={iconColor} />
-          </NavLink>
-
-          <NavLink
-            to="/portfolio"
+          </a>
+          <a
+            href="#portfolio"
             onClick={() => setShowNav(false)}
-            className={({ isActive }) => (isActive ? 'active' : '')}
             aria-label="Portfolio"
             title="Portfolio"
             style={{ marginRight: '32px' }}
           >
             <FontAwesomeIcon icon={faSuitcase} color={iconColor} />
-          </NavLink>
-          <NavLink
-            to="/contact"
+          </a>
+          <a
+            href="#contact"
             onClick={() => setShowNav(false)}
-            className={({ isActive }) => (isActive ? 'active' : '')}
             aria-label="Contact"
             title="Contact"
             style={{ marginRight: '32px' }}
           >
             <FontAwesomeIcon icon={faEnvelope} color={iconColor} />
-          </NavLink>
+          </a>
           <a
             href="https://www.linkedin.com/in/jenny-kunte-seattle/"
             target="_blank"

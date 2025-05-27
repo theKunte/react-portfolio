@@ -1,22 +1,44 @@
 import './App.scss'
-import { Routes, Route } from 'react-router-dom'
-import Layout from './assets/components/Layout'
 import Home from './assets/components/Home'
 import Contact from './assets/components/Contact'
 import Portfolio from './assets/components/Portfolio'
-import Dashboard from './assets/components/Dashboard'
+import NavBar from './assets/components/NavBar'
+import { useRef, useEffect } from 'react'
+import LocomotiveScroll from 'locomotive-scroll'
+import 'locomotive-scroll/dist/locomotive-scroll.css'
 
 function App() {
+  const scrollRef = useRef(null)
+
+  useEffect(() => {
+    const scroll = new LocomotiveScroll({
+      el: scrollRef.current,
+      smooth: true,
+      lerp: 0.08,
+    })
+    return () => scroll.destroy()
+  }, [])
+
   return (
-    // TODO: fix Route. At the moment the page isnt loading again if you chance it to another page
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="portfolio" element={<Portfolio />} />
-        <Route path="dashboard" element={<Dashboard />} />
-      </Route>
-    </Routes>
+    <>
+      <NavBar />
+      <div
+        className="scroll-main-layout"
+        id="main-scroll"
+        data-scroll-container
+        ref={scrollRef}
+      >
+        <section id="home" data-scroll-section>
+          <Home />
+        </section>
+        <section id="portfolio" data-scroll-section>
+          <Portfolio />
+        </section>
+        <section id="contact" data-scroll-section>
+          <Contact />
+        </section>
+      </div>
+    </>
   )
 }
 
