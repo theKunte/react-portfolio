@@ -3,6 +3,7 @@ import Home from './assets/components/Home'
 import Contact from './assets/components/Contact'
 import Portfolio from './assets/components/Portfolio'
 import NavBar from './assets/components/NavBar'
+import Footer from './assets/components/Footer'
 import { useRef, useEffect } from 'react'
 import LocomotiveScroll from 'locomotive-scroll'
 import 'locomotive-scroll/dist/locomotive-scroll.css'
@@ -37,6 +38,7 @@ function App() {
         <section id="contact" data-scroll-section>
           <Contact />
         </section>
+        <Footer />
       </div>
     </>
   )
