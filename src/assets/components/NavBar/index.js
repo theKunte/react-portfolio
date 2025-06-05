@@ -9,15 +9,31 @@ import {
   faClose,
 } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false)
+  const [hideOnScroll, setHideOnScroll] = useState(false)
+  const [lastScrollY, setLastScrollY] = useState(0)
 
   const iconColor = '#e2fcff'
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      if (currentScrollY > lastScrollY && currentScrollY > 60) {
+        setHideOnScroll(true)
+      } else {
+        setHideOnScroll(false)
+      }
+      setLastScrollY(currentScrollY)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [lastScrollY])
+
   return (
-    <div className="nav-bar">
+    <div className={`nav-bar${hideOnScroll ? ' nav-bar--hidden' : ''}`}>
       <nav className={showNav ? 'mobile-show' : ''}>
         <div className={showNav ? 'nav-icons-center' : 'nav-icons-row'}>
           <NavLink
