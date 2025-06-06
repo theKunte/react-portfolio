@@ -5,19 +5,24 @@ import Portfolio from './assets/components/Portfolio'
 import NavBar from './assets/components/NavBar'
 import Footer from './assets/components/Footer'
 import { useRef, useEffect } from 'react'
-import LocomotiveScroll from 'locomotive-scroll'
 import 'locomotive-scroll/dist/locomotive-scroll.css'
 
 function App() {
   const scrollRef = useRef(null)
 
   useEffect(() => {
-    const scroll = new LocomotiveScroll({
-      el: scrollRef.current,
-      smooth: true,
-      lerp: 0.08,
+    if (!scrollRef.current) return
+    let scroll
+    import('locomotive-scroll').then(({ default: LocomotiveScroll }) => {
+      scroll = new LocomotiveScroll({
+        el: scrollRef.current,
+        smooth: true,
+        lerp: 0.08,
+      })
     })
-    return () => scroll.destroy()
+    return () => {
+      if (scroll) scroll.destroy()
+    }
   }, [])
 
   return (
@@ -38,8 +43,8 @@ function App() {
         </section>
         <section id="contact" data-scroll-section>
           <Contact />
+          <Footer />
         </section>
-        <Footer />
       </div>
     </>
   )

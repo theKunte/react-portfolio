@@ -6,10 +6,6 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <div className="footer-contact">
-          <span>Contact: </span>
-          <a href="mailto:j.k.c.seattle@gmail.com">j.k.c.seattle@gmail.com</a>
-        </div>
         <div className="footer-social">
           <a
             href="https://www.linkedin.com/in/jenny-kunte-seattle/"
@@ -18,7 +14,8 @@ const Footer = () => {
             aria-label="LinkedIn"
             title="LinkedIn"
           >
-            <FontAwesomeIcon icon={faLinkedin} className="footer-icon" />
+            <FontAwesomeIcon icon={faLinkedin} className="footer-icon" />{' '}
+            LinkedIn
           </a>
           <a
             href="https://github.com/theKunte"
@@ -27,8 +24,11 @@ const Footer = () => {
             aria-label="GitHub"
             title="GitHub"
           >
-            <FontAwesomeIcon icon={faGithub} className="footer-icon" />
+            <FontAwesomeIcon icon={faGithub} className="footer-icon" /> GitHub
           </a>
+        </div>
+        <div className="footer-important">
+          Seattle, WA &mdash; Application Developer &mdash; Portfolio
         </div>
       </div>
       <div className="footer-copy">

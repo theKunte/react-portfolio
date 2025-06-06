@@ -4,34 +4,34 @@ import ProfileJ from '../../images/profile-j.png'
 
 const Home = () => {
   return (
-    <>
-      <div className="home-main-layout">
-        <div className="home-left">
-          <img className="profilePic" src={ProfileJ} alt="Profile" />
-        </div>
-        <div className="home-right">
-          <div className="text-zone">
-            <h1 className="main-title">
-              Hi, I'm <span className="name">Jenny Kunte</span>
-            </h1>
-            <h2 className="job-title">Web Developer</h2>
-            <div className="subtitle">
-              From Espresso Artistry to Code Craftsmanship:
-              <br />
-              Brewing Innovation with a BA in Application Development
-            </div>
-            <div className="button-row">
-              <a href="#contact" className="flat-button">
-                CONTACT ME
-              </a>
-              <Link to="/portfolio" className="flat-button alt">
-                PROJECTS
-              </Link>
-            </div>
+    <section className="home-section">
+      <div className="home-content">
+        <div className="home-intro">
+          <h1 className="home-title">
+            Hi, I'm <span className="name">Jenny Kunte</span>
+          </h1>
+          <h2 className="home-job">Application Developer</h2>
+          <p className="home-description">
+            I design and build modern web applications with a focus on clean
+            code, accessibility, and delightful user experiences.
+            <br />
+            From Espresso Artistry to Code Craftsmanship: Brewing Innovation
+            with a BA in Application Development.
+          </p>
+          <div className="home-actions">
+            <a href="#contact" className="home-btn primary">
+              Contact Me
+            </a>
+            <Link to="/portfolio" className="home-btn secondary">
+              View Projects
+            </Link>
           </div>
         </div>
+        <div className="home-image-wrapper">
+          <img className="home-profile-pic" src={ProfileJ} alt="Profile" />
+        </div>
       </div>
-    </>
+    </section>
   )
 }
 
