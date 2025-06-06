@@ -10,13 +10,10 @@ const Home = () => {
           <h1 className="home-title">
             Hi, I'm <span className="name">Jenny Kunte</span>
           </h1>
-          <h2 className="home-job">Application Developer</h2>
+          <h2 className="home-job">Software Developer</h2>
           <p className="home-description">
-            I design and build modern web applications with a focus on clean
+            I design and build creative web applications with a focus on clean
             code, accessibility, and delightful user experiences.
-            <br />
-            From Espresso Artistry to Code Craftsmanship: Brewing Innovation
-            with a BA in Application Development.
           </p>
           <div className="home-actions">
             <a href="#contact" className="home-btn primary">

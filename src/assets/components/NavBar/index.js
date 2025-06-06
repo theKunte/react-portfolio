@@ -1,22 +1,17 @@
 import './index.scss'
-import { NavLink } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faHome,
-  faEnvelope,
-  faSuitcase,
-  faBars,
-  faClose,
-} from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { useState, useEffect } from 'react'
 
+const scrollToContact = (e) => {
+  e.preventDefault()
+  const contactSection = document.getElementById('contact')
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: 'smooth' })
+  }
+}
+
 const Navbar = () => {
-  const [showNav, setShowNav] = useState(false)
   const [hideOnScroll, setHideOnScroll] = useState(false)
   const [lastScrollY, setLastScrollY] = useState(0)
-
-  const iconColor = '#e2fcff'
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,78 +29,23 @@ const Navbar = () => {
 
   return (
     <div className={`nav-bar${hideOnScroll ? ' nav-bar--hidden' : ''}`}>
-      <nav className={showNav ? 'mobile-show' : ''}>
-        <div className={showNav ? 'nav-icons-center' : 'nav-icons-row'}>
-          <NavLink
-            to="/"
-            onClick={() => setShowNav(false)}
-            className={({ isActive }) => (isActive ? 'active' : '')}
-            aria-label="Home"
-            title="Home"
-            style={{ marginRight: '32px' }}
+      <div className="nav-sayhello-wrapper">
+        <a
+          href="#contact"
+          className="sayhello-btn"
+          aria-label="Say Hello"
+          onClick={scrollToContact}
+        >
+          Say Hello{' '}
+          <span
+            className="wave-emoji"
+            role="img"
+            aria-label="Waving Hand"
           >
-            <FontAwesomeIcon icon={faHome} color={iconColor} />
-          </NavLink>
-
-          <NavLink
-            to="/portfolio"
-            onClick={() => setShowNav(false)}
-            className={({ isActive }) => (isActive ? 'active' : '')}
-            aria-label="Portfolio"
-            title="Portfolio"
-            style={{ marginRight: '32px' }}
-          >
-            <FontAwesomeIcon icon={faSuitcase} color={iconColor} />
-          </NavLink>
-          <NavLink
-            to="/contact"
-            onClick={() => setShowNav(false)}
-            className={({ isActive }) => (isActive ? 'active' : '')}
-            aria-label="Contact"
-            title="Contact"
-            style={{ marginRight: '32px' }}
-          >
-            <FontAwesomeIcon icon={faEnvelope} color={iconColor} />
-          </NavLink>
-          <a
-            href="https://www.linkedin.com/in/jenny-kunte-seattle/"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="LinkedIn"
-            title="LinkedIn"
-            style={{ marginRight: '32px' }}
-          >
-            <FontAwesomeIcon icon={faLinkedin} color={iconColor} />
-          </a>
-          <a
-            href="https://github.com/theKunte"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="GitHub"
-            title="GitHub"
-          >
-            <FontAwesomeIcon icon={faGithub} color={iconColor} />
-          </a>
-        </div>
-        <FontAwesomeIcon
-          onClick={() => setShowNav(false)}
-          icon={faClose}
-          color="#ffd700"
-          size="3x"
-          className="close-icon"
-          aria-label="Close navigation"
-          title="Close navigation"
-        />
-      </nav>
-      <FontAwesomeIcon
-        onClick={() => setShowNav(true)}
-        icon={faBars}
-        color={iconColor}
-        size="3x"
-        className="hamburger-icon"
-        aria-label="Open navigation"
-        title="Open navigation"
-      />
+            👋
+          </span>
+        </a>
+      </div>
     </div>
   )
 }

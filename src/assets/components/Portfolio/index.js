@@ -23,8 +23,8 @@ const Portfolio = () => {
           <div className="portfolio-content-zone">
             <h1 className="main-title">My Recent Work</h1>
             <p className="portfolio-intro">
-              Here are a few past design projects I've worked on. Want to see
-              more? <a href="TODO: fix Email"> Contact Me</a>.
+              Here are a few past projects I've worked on. Want to see more?{' '}
+              <a href="TODO: fix Email"> Contact Me</a>.
             </p>
             <div className="portfolio-cards-wrapper">
               {portfolio.map((port, idx) => (
