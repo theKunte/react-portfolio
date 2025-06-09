@@ -6,6 +6,7 @@ import NavBar from './assets/components/NavBar'
 import Footer from './assets/components/Footer'
 import { useRef, useEffect } from 'react'
 import 'locomotive-scroll/dist/locomotive-scroll.css'
+import Skills from './assets/components/Skills'
 
 function App() {
   const scrollRef = useRef(null)
@@ -36,6 +37,9 @@ function App() {
       >
         <section id="home" data-scroll-section>
           <Home />
+        </section>
+        <section id="skills" data-scroll-section>
+          <Skills />
         </section>
 
         <section id="portfolio" data-scroll-section>

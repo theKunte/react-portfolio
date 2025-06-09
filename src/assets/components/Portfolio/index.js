@@ -21,10 +21,12 @@ const Portfolio = () => {
         <div className="portfolio-left" style={{ display: 'none' }} />
         <div className="portfolio-right" style={{ width: '100%' }}>
           <div className="portfolio-content-zone">
-            <h1 className="main-title">My Recent Work</h1>
-            <p className="portfolio-intro">
+            <h1 className="main-title" style={{ color: '#c04a4a', fontFamily: 'Montserrat, Coolvetica, Arial, sans-serif', fontWeight: 800, fontSize: '3.2rem', marginBottom: '8px', marginLeft: '8px', lineHeight: 1.1, letterSpacing: '-1px' }}>
+              My Recent Work
+            </h1>
+            <p className="portfolio-intro" style={{ fontFamily: 'Lato, Arial, sans-serif', fontSize: '1.55rem', color: '#444', marginBottom: '22px', fontWeight: 400, maxWidth: '540px' }}>
               Here are a few past projects I've worked on. Want to see more?{' '}
-              <a href="TODO: fix Email"> Contact Me</a>.
+              <a href="#contact" style={{ color: '#c04a4a', textDecoration: 'underline', fontWeight: 700 }}>Contact Me</a>.
             </p>
             <div className="portfolio-cards-wrapper">
               {portfolio.map((port, idx) => (
