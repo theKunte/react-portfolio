@@ -241,7 +241,9 @@
     border-radius: 12px;
     margin-bottom: 0;
     font-family: 'Lato', Arial, sans-serif;
-    transition: border 0.2s, box-shadow 0.2s;
+    transition:
+      border 0.2s,
+      box-shadow 0.2s;
     &:focus {
       border: 1.5px solid #0078d4;
       outline: none;
@@ -273,7 +275,9 @@
   border: none;
   border-radius: 24px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
   cursor: pointer;
   text-decoration: none;
   letter-spacing: 1px;

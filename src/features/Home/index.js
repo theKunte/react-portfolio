@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom'
-import './index.scss'
-import ProfileJ from '../../assets/images/profile-j.png'
+import { Link } from 'react-router-dom';
+import './index.scss';
+import ProfileJ from '../../assets/images/profile-j.png';
 
 const Home = () => {
   return (
@@ -12,8 +12,8 @@ const Home = () => {
           </h1>
           <h2 className="home-job">Software Developer</h2>
           <p className="home-description">
-            I design and build creative web applications with a focus on clean
-            code, accessibility, and delightful user experiences.
+            I design and build creative web applications with a focus on clean code, accessibility,
+            and delightful user experiences.
           </p>
           <div className="home-actions">
             <a href="#contact" className="home-btn primary">
@@ -29,7 +29,7 @@ const Home = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

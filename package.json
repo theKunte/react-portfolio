@@ -33,8 +33,9 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "lint": "react-scripts lint",
-    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
+    "lint": "npx eslint \"src/**/*.{js,jsx,ts,tsx}\"",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "eslint:fix": "npx eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -55,6 +56,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1"
+    "eslint": "^8.57.1",
+    "gh-pages": "^6.1.1",
+    "prettier": "^3.6.2"
   }
 }

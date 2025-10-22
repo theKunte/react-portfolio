@@ -142,7 +142,10 @@ button,
   border: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   letter-spacing: 1px;
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    box-shadow 0.2s;
   cursor: pointer;
 }
 button:hover,

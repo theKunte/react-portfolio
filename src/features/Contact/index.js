@@ -1,8 +1,8 @@
-import './index.scss'
-import { useRef } from 'react'
+import './index.scss';
+import { useRef } from 'react';
 
 const Contact = () => {
-  const form = useRef()
+  const form = useRef();
 
   return (
     <section className="contact-section">
@@ -38,13 +38,7 @@ const Contact = () => {
             <label htmlFor="message" className="visually-hidden">
               Message
             </label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Message"
-              required
-              rows={5}
-            />
+            <textarea id="message" name="message" placeholder="Message" required rows={5} />
             <div className="button-row">
               <button type="submit" className="flat-button primary">
                 Send
@@ -68,7 +62,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

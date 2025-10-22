@@ -155,7 +155,9 @@
   height: 320px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18), 0 1.5px 8px rgba(0, 0, 0, 0.08);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.18),
+    0 1.5px 8px rgba(0, 0, 0, 0.08);
   border: 6px solid #fff;
   background: #fff;
   @media (max-width: 900px) {
@@ -280,7 +282,9 @@
   font-weight: 700;
   letter-spacing: 1px;
   text-decoration: none;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
   cursor: pointer;
   border: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -319,7 +323,9 @@
   height: 320px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18), 0 1.5px 8px rgba(0, 0, 0, 0.08);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.18),
+    0 1.5px 8px rgba(0, 0, 0, 0.08);
   border: 6px solid #fff;
   background: #fff;
   @media (max-width: 900px) {

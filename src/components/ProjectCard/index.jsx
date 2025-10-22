@@ -1,5 +1,5 @@
-import React from 'react'
-import './index.scss'
+import React from 'react';
+import './index.scss';
 
 const ProjectCard = ({ title, desc, tech, demo, github, image }) => {
   return (
@@ -25,7 +25,7 @@ const ProjectCard = ({ title, desc, tech, demo, github, image }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProjectCard
+export default ProjectCard;

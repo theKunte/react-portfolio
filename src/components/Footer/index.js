@@ -1,6 +1,6 @@
-import './index.scss'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import './index.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
@@ -14,8 +14,7 @@ const Footer = () => {
             aria-label="LinkedIn"
             title="LinkedIn"
           >
-            <FontAwesomeIcon icon={faLinkedin} className="footer-icon" />{' '}
-            LinkedIn
+            <FontAwesomeIcon icon={faLinkedin} className="footer-icon" /> LinkedIn
           </a>
           <a
             href="https://github.com/theKunte"
@@ -35,7 +34,7 @@ const Footer = () => {
         &copy; {new Date().getFullYear()} Jenny Kunte. All rights reserved.
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

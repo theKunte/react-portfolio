@@ -1,31 +1,31 @@
-import './index.scss'
-import { useState, useEffect } from 'react'
+import './index.scss';
+import { useState, useEffect } from 'react';
 
 const scrollToContact = (e) => {
-  e.preventDefault()
-  const contactSection = document.getElementById('contact')
+  e.preventDefault();
+  const contactSection = document.getElementById('contact');
   if (contactSection) {
-    contactSection.scrollIntoView({ behavior: 'smooth' })
+    contactSection.scrollIntoView({ behavior: 'smooth' });
   }
-}
+};
 
 const Navbar = () => {
-  const [hideOnScroll, setHideOnScroll] = useState(false)
-  const [lastScrollY, setLastScrollY] = useState(0)
+  const [hideOnScroll, setHideOnScroll] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY
+      const currentScrollY = window.scrollY;
       if (currentScrollY > lastScrollY && currentScrollY > 60) {
-        setHideOnScroll(true)
+        setHideOnScroll(true);
       } else {
-        setHideOnScroll(false)
+        setHideOnScroll(false);
       }
-      setLastScrollY(currentScrollY)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [lastScrollY])
+      setLastScrollY(currentScrollY);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
   return (
     <div className={`nav-bar${hideOnScroll ? ' nav-bar--hidden' : ''}`}>
@@ -43,7 +43,7 @@ const Navbar = () => {
         </a>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

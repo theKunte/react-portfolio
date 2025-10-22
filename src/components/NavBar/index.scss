@@ -9,7 +9,9 @@
   align-items: center;
   justify-content: flex-end;
   padding: 0 2px;
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s;
+  transition:
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.25s;
 }
 
 .nav-bar--hidden {
@@ -41,6 +43,9 @@
   cursor: pointer;
   text-decoration: none;
   letter-spacing: 1px;
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    box-shadow 0.2s;
   outline: none;
 }

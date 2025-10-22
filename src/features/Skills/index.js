@@ -1,4 +1,4 @@
-import './index.scss'
+import './index.scss';
 
 const skillsData = [
   {
@@ -39,12 +39,9 @@ const skillsData = [
   },
   {
     category: 'AI / ML (Learning)',
-    skills: [
-      { name: 'Hugging Face Agents' },
-      { name: 'AI Agents (Conceptual)' },
-    ],
+    skills: [{ name: 'Hugging Face Agents' }, { name: 'AI Agents (Conceptual)' }],
   },
-]
+];
 
 const Skills = () => {
   return (
@@ -64,7 +61,7 @@ const Skills = () => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;

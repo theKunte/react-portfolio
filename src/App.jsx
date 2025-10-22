@@ -1,40 +1,35 @@
-import './App.scss'
-import Home from './features/Home'
-import Contact from './features/Contact'
-import Portfolio from './features/Portfolio'
-import NavBar from './components/NavBar'
-import Footer from './components/Footer'
-import { useRef, useEffect } from 'react'
-import 'locomotive-scroll/dist/locomotive-scroll.css'
-import Skills from './features/Skills'
+import './App.scss';
+import Home from './features/Home';
+import Contact from './features/Contact';
+import Portfolio from './features/Portfolio';
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
+import { useRef, useEffect } from 'react';
+import 'locomotive-scroll/dist/locomotive-scroll.css';
+import Skills from './features/Skills';
 
 function App() {
-  const scrollRef = useRef(null)
+  const scrollRef = useRef(null);
 
   useEffect(() => {
-    if (!scrollRef.current) return
-    let scroll
+    if (!scrollRef.current) return;
+    let scroll;
     import('locomotive-scroll').then(({ default: LocomotiveScroll }) => {
       scroll = new LocomotiveScroll({
         el: scrollRef.current,
         smooth: true,
         lerp: 0.08,
-      })
-    })
+      });
+    });
     return () => {
-      if (scroll) scroll.destroy()
-    }
-  }, [])
+      if (scroll) scroll.destroy();
+    };
+  }, []);
 
   return (
     <>
       <NavBar />
-      <div
-        className="scroll-main-layout"
-        id="main-scroll"
-        data-scroll-container
-        ref={scrollRef}
-      >
+      <div className="scroll-main-layout" id="main-scroll" data-scroll-container ref={scrollRef}>
         <section id="home" data-scroll-section>
           <Home />
         </section>
@@ -51,7 +46,7 @@ function App() {
         </section>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
