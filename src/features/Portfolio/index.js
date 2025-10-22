@@ -2,8 +2,6 @@ import './index.scss';
 import React, { useState, useEffect } from 'react';
 import ProjectCard from '../../components/ProjectCard';
 import projectsData from '../../data/projectsData';
-import { collection, getDocs } from 'firebase/firestore/lite';
-import { db } from '../../firebase';
 
 const Portfolio = () => {
   const [projects, setProjects] = useState(projectsData);
@@ -13,25 +11,12 @@ const Portfolio = () => {
 
     const fetchProjects = async () => {
       try {
-        const snapshot = await getDocs(collection(db, 'portfolio'));
-        const items = snapshot.docs.map((doc) => {
-          const data = doc.data() || {};
-          return {
-            id: doc.id,
-            title: data.title || data.name || data.cover || '',
-            desc: data.desc || data.description || data.info || '',
-            tech: data.tech || data.info || '',
-            demo: data.demo || data.url || '',
-            github: data.github || '',
-            image: data.image || data.cover || '/portfolio/project1/one.png',
-          };
-        });
-
-        if (mounted && items.length > 0) {
-          setProjects(items);
-        }
+        const res = await fetch('/projects.json');
+        if (!res.ok) throw new Error('no projects');
+        const items = await res.json();
+        if (mounted && Array.isArray(items) && items.length > 0) setProjects(items);
       } catch (err) {
-        // silently continue using local projectsData as fallback
+        // fallback to bundled data (projectsData) which is already set
       }
     };
 
