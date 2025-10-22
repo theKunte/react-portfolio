@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Project One",
+    "desc": "A demo project built with React and AWS.",
+    "tech": "React, JSX, AWS",
+    "demo": "http://example.com",
+    "github": "http://github.com",
+    "image": "/portfolio/project1/one.png"
+  },
+  {
+    "title": "Project Two",
+    "desc": "Another project showing UI work.",
+    "tech": "React, CSS, Node",
+    "demo": "http://example.com",
+    "github": "http://github.com",
+    "image": "/portfolio/project1/one.png"
+  },
+  {
+    "title": "Project Three",
+    "desc": "A full-stack app using serverless services.",
+    "tech": "React, Serverless, DynamoDB",
+    "demo": "http://example.com",
+    "github": "http://github.com",
+    "image": "/portfolio/project1/one.png"
+  }
+]

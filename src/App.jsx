@@ -1,12 +1,12 @@
 import './App.scss';
-import Home from './assets/components/Home';
-import Contact from './assets/components/Contact';
-import Portfolio from './assets/components/Portfolio';
-import NavBar from './assets/components/NavBar';
-import Footer from './assets/components/Footer';
+import Home from './features/Home';
+import Contact from './features/Contact';
+import Portfolio from './features/Portfolio';
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 import { useRef, useEffect } from 'react';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
-import Skills from './assets/components/Skills';
+import Skills from './features/Skills';
 
 function App() {
   const scrollRef = useRef(null);
@@ -20,6 +20,14 @@ function App() {
         smooth: true,
         lerp: 0.08,
       });
+      // expose instance for helpers that need to programmatically scroll
+      try {
+        scrollRef.current.__locoInstance = scroll;
+        // also expose as a global shorthand for some integrations
+        window.locomotiveInstance = scroll;
+      } catch (err) {
+        // ignore if read-only
+      }
     });
     return () => {
       if (scroll) scroll.destroy();
