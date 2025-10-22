@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import './index.scss'
-import ProfileJ from '../../images/profile-j.png'
+import ProfileJ from '../../assets/images/profile-j.png'
 
 const Home = () => {
   return (

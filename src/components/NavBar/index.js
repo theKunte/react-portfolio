@@ -37,11 +37,7 @@ const Navbar = () => {
           onClick={scrollToContact}
         >
           Say Hello{' '}
-          <span
-            className="wave-emoji"
-            role="img"
-            aria-label="Waving Hand"
-          >
+          <span className="wave-emoji" role="img" aria-label="Waving Hand">
             👋
           </span>
         </a>

@@ -35,10 +35,7 @@ const skillsData = [
   },
   {
     category: 'Operating System',
-    skills: [
-      { name: 'Windows' },
-      { name: 'Linux' },
-    ],
+    skills: [{ name: 'Windows' }, { name: 'Linux' }],
   },
   {
     category: 'AI / ML (Learning)',
