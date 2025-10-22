@@ -1,12 +1,10 @@
 import './index.scss';
 import { useState, useEffect } from 'react';
+import scrollToId from '../../utils/scrollTo';
 
 const scrollToContact = (e) => {
   e.preventDefault();
-  const contactSection = document.getElementById('contact');
-  if (contactSection) {
-    contactSection.scrollIntoView({ behavior: 'smooth' });
-  }
+  scrollToId('contact');
 };
 
 const Navbar = () => {

@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
 import './index.scss';
+import scrollToId from '../../utils/scrollTo';
 import ProfileJ from '../../assets/images/profile-j.png';
 
 const Home = () => {
@@ -16,12 +16,26 @@ const Home = () => {
             and delightful user experiences.
           </p>
           <div className="home-actions">
-            <a href="#contact" className="home-btn primary">
+            <a
+              href="#contact"
+              className="home-btn primary"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToId('contact');
+              }}
+            >
               Contact Me
             </a>
-            <Link to="/portfolio" className="home-btn secondary">
+            <a
+              href="#portfolio"
+              className="home-btn secondary"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToId('portfolio');
+              }}
+            >
               View Projects
-            </Link>
+            </a>
           </div>
         </div>
         <div className="home-image-wrapper">

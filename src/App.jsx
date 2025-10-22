@@ -20,6 +20,14 @@ function App() {
         smooth: true,
         lerp: 0.08,
       });
+      // expose instance for helpers that need to programmatically scroll
+      try {
+        scrollRef.current.__locoInstance = scroll;
+        // also expose as a global shorthand for some integrations
+        window.locomotiveInstance = scroll;
+      } catch (err) {
+        // ignore if read-only
+      }
     });
     return () => {
       if (scroll) scroll.destroy();
