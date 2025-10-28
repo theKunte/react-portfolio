@@ -1,6 +1,20 @@
-# react-portfolio
+# React Portfolio
 
-Hi there! Welcome to my react portfolio! Thanks for stopping by and learn something about me. 
+My personal developer portfolio built with React and deployed on GitHub Pages.
 
-At this momemnt the portfolio is not hosted on a server and you will have to clone and do the magic of open it on your side ( dont worry, I will host this portfolio soon!)
+## Features
 
+- Responsive single-page layout
+
+## Tech Stack
+
+React 18 · React Router 6 · CSS Modules · GitHub Pages
+
+## Setup
+
+npm install
+npm run dev
+
+## Deployment
+
+npm run build && npm run deploy

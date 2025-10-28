@@ -12,8 +12,9 @@ const Home = () => {
           </h1>
           <h2 className="home-job">Software Developer</h2>
           <p className="home-description">
-            I design and build creative web applications with a focus on clean code, accessibility,
-            and delightful user experiences.
+            I'm a software developer, currently based in Seattle, WA. I design and build web
+            applications with focus on accessibility and delightful user experiences. Experienced
+            with REACT, JavaScript,and more.
           </p>
           <div className="home-actions">
             <a
