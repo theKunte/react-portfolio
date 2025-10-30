@@ -86,8 +86,9 @@ const Portfolio = () => {
       <div className="portfolio-left" style={{ display: 'none' }} />
       <div className="portfolio-right" style={{ width: '100%' }}>
         <div className="portfolio-content-zone">
-          <h1 className="main-title">My Recent Work</h1>
-          <p className="portfolio-intro">
+          <h2 className="skills-title">PROJECTS</h2>
+          <p className="skills-subtitle">
+            {' '}
             Here are a few past projects I've worked on. Want to see more?{' '}
             <a
               href="#contact"
