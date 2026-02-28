@@ -3,17 +3,21 @@
 
 .footer {
   /* make background span edge-to-edge of the viewport */
-  width: 100vw;
+  width: 100%;
   position: relative;
 
-  /* Footer styles using portfolio theme variables */
-  background: $brand-color;
+  /* Footer styles using portfolio theme variables with glassmorphism */
+  background: rgba(192, 74, 74, 0.85);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
   padding: 28px 16px 12px 16px;
   font-family: 'Lato', Arial, sans-serif;
   margin-top: 0;
   z-index: 10;
   box-shadow: 0 -2px 24px rgba(0, 0, 0, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .footer-inner {

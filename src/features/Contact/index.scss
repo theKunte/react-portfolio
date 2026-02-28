@@ -173,10 +173,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
   border-radius: 14px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-  border: 2px solid #e2fcff;
+  border: 2px solid rgba(226, 252, 255, 0.4);
   padding: 28px 28px; /* give the panel breathing room for the fields */
   margin: 18px auto; /* center the panel inside the container */
   width: 100%;
