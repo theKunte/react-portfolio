@@ -1,3 +1,10 @@
+// Option 1: Import images directly (BEST - bundled with webpack)
+// import project1Img from '../assets/images/projects/project1.png';
+// import project2Img from '../assets/images/projects/project2.png';
+
+// Option 2: Use public folder with PUBLIC_URL (your current approach)
+// Option 3: Use external URLs (Firebase Storage, Imgur, Cloudinary, etc.)
+
 const projects = [
   {
     title: 'Project One',
@@ -5,7 +12,11 @@ const projects = [
     tech: 'React, JSX, AWS',
     demo: 'http://example.com',
     github: 'http://github.com',
-    image: '/portfolio/project1/one.png',
+    // Use imported image: image: project1Img,
+    // Or use public folder:
+    image: `${process.env.PUBLIC_URL}/portfolio/project1/one.png`,
+    // Or use Firebase Storage URL directly:
+    // image: 'https://firebasestorage.googleapis.com/v0/b/react-portfolio-dashboar-d3461.appspot.com/o/portfolio%2Fproject1.png?alt=media&token=...',
   },
   {
     title: 'Project Two',
@@ -13,7 +24,7 @@ const projects = [
     tech: 'React, CSS, Node',
     demo: 'http://example.com',
     github: 'http://github.com',
-    image: '/portfolio/project1/one.png',
+    image: `${process.env.PUBLIC_URL}/portfolio/project1/one.png`,
   },
   {
     title: 'Project Three',
@@ -21,7 +32,7 @@ const projects = [
     tech: 'React, Serverless, DynamoDB',
     demo: 'http://example.com',
     github: 'http://github.com',
-    image: '/portfolio/project1/one.png',
+    image: `${process.env.PUBLIC_URL}/portfolio/project1/one.png`,
   },
 ];
 

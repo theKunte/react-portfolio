@@ -20,9 +20,26 @@ const normalizeProject = (raw = {}, idx) => {
     raw.imageUrl ||
     raw.picture ||
     raw.photo ||
-    '/portfolio/project1/one.png';
+    `${process.env.PUBLIC_URL}/portfolio/project1/one.png`;
   const id = raw.id || raw._id || raw.key || `p-${idx}`;
-  return { id, title, desc, tech, demo, github, image };
+  
+  // Ensure image path is correctly formatted
+  let imagePath;
+  if (!image) {
+    // No image provided, use default
+    imagePath = `${process.env.PUBLIC_URL}/portfolio/project1/one.png`;
+  } else if (image.startsWith('http://') || image.startsWith('https://')) {
+    // Already a full URL (e.g., Firebase Storage URL)
+    imagePath = image;
+  } else if (image.startsWith('/')) {
+    // Absolute path - add PUBLIC_URL prefix
+    imagePath = `${process.env.PUBLIC_URL}${image}`;
+  } else {
+    // Relative path - add PUBLIC_URL prefix with separator
+    imagePath = `${process.env.PUBLIC_URL}/${image}`;
+  }
+  
+  return { id, title, desc, tech, demo, github, image: imagePath };
 };
 
 const Portfolio = () => {
@@ -33,14 +50,31 @@ const Portfolio = () => {
 
     const fetchFromFirestore = async () => {
       try {
+        console.log('📡 Fetching from Firestore...');
         const col = collection(db, 'portfolio');
         const snapshot = await getDocs(col);
-        const docs = snapshot.docs.map((d, i) => normalizeProject({ id: d.id, ...d.data() }, i));
+        console.log(`📊 Firestore returned ${snapshot.docs.length} documents`);
+        
+        if (snapshot.docs.length === 0) {
+          console.warn('⚠️ Firestore collection is empty');
+          return false;
+        }
+        
+        const docs = snapshot.docs.map((d, i) => {
+          const rawData = { id: d.id, ...d.data() };
+          console.log(`📄 Document ${i + 1}:`, rawData);
+          return normalizeProject(rawData, i);
+        });
+        
+        console.log('✨ Normalized Firestore data:', docs);
+        
         if (mounted && Array.isArray(docs) && docs.length > 0) {
           setProjects(docs);
           return true;
         }
       } catch (err) {
+        console.error('❌ Firestore fetch error:', err);
+        console.error('Error details:', err.message);
         // Firestore not available or permission denied — fall through to next source
       }
       return false;
@@ -65,10 +99,19 @@ const Portfolio = () => {
     };
 
     const loadProjects = async () => {
+      console.log('🔍 Starting to load projects...');
       const fromFs = await fetchFromFirestore();
-      if (fromFs) return;
+      if (fromFs) {
+        console.log('✅ Using Firestore data');
+        return;
+      }
+      console.log('⚠️ Firestore data not available, trying public JSON...');
       const fromJson = await fetchFromPublicJson();
-      if (fromJson) return;
+      if (fromJson) {
+        console.log('✅ Using public JSON data');
+        return;
+      }
+      console.log('⚠️ Using fallback local data from projectsData.js');
       // fallback: normalize bundled data and set
       const normalized = projectsData.map((p, i) => normalizeProject(p, i));
       if (mounted) setProjects(normalized);

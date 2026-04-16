@@ -5,7 +5,7 @@
     "tech": "React, JSX, AWS",
     "demo": "http://example.com",
     "github": "http://github.com",
-    "image": "/portfolio/project1/one.png"
+    "image": "portfolio/project1/one.png"
   },
   {
     "title": "Project Two",
@@ -13,7 +13,7 @@
     "tech": "React, CSS, Node",
     "demo": "http://example.com",
     "github": "http://github.com",
-    "image": "/portfolio/project1/one.png"
+    "image": "portfolio/project1/one.png"
   },
   {
     "title": "Project Three",
@@ -21,6 +21,6 @@
     "tech": "React, Serverless, DynamoDB",
     "demo": "http://example.com",
     "github": "http://github.com",
-    "image": "/portfolio/project1/one.png"
+    "image": "portfolio/project1/one.png"
   }
 ]
