@@ -1,13 +1,11 @@
-﻿@use '../../styles/variables.scss' as *;
-
 .contact-section {
   position: relative;
-  min-height: 60vh;
+  min-height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: $bg;
-  padding: 80px 24px 100px;
+  background: var(--bg, #f7f9fb);
+  padding: 60px 24px 80px;
 }
 
 .contact-cta {
@@ -20,13 +18,15 @@
   gap: 20px;
 }
 
+/* .contact-title removed - using shared .skills-title from sections.css */
+
 .contact-eyebrow {
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: $brand-color;
+  color: var(--brand-color, #c04a4a);
   margin: 0;
 }
 
@@ -34,15 +34,15 @@
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: clamp(2.4rem, 6vw, 4rem);
   font-weight: 800;
-  color: #1a1a2e;
+  color: var(--brand-color, #c04a4a);
   margin: 0;
   line-height: 1.1;
 }
 
 .contact-body {
   font-family: 'Lato', Arial, sans-serif;
-  font-size: 1.05rem;
-  color: $muted-text;
+  font-size: 1.15rem;
+  color: var(--muted-text, #6b7280);
   line-height: 1.7;
   max-width: 480px;
   margin: 0;
@@ -52,9 +52,9 @@
   display: inline-block;
   margin-top: 8px;
   padding: 14px 36px;
-  background: $brand-color;
-  color: #fff;
-  border: 2px solid $brand-color;
+  background: var(--accent-color, #fbbe08);
+  color: #1a2341;
+  border: 2px solid var(--accent-color, #fbbe08);
   border-radius: 32px;
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 1rem;
@@ -64,13 +64,13 @@
   transition:
     background 0.2s,
     border-color 0.2s;
+}
 
-  &:hover,
-  &:focus {
-    background: #a03a3a;
-    border-color: #a03a3a;
-    outline: none;
-  }
+.contact-email-btn:hover,
+.contact-email-btn:focus {
+  background: #e5aa07;
+  border-color: #e5aa07;
+  outline: none;
 }
 
 .contact-links {
@@ -79,6 +79,7 @@
   gap: 12px;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 80px;
 }
 
 .contact-divider {
@@ -89,21 +90,21 @@
 .contact-link {
   font-family: 'Lato', Arial, sans-serif;
   font-size: 0.95rem;
-  color: $muted-text;
+  color: var(--muted-text, #6b7280);
   text-decoration: none;
   letter-spacing: 0.3px;
   transition: color 0.2s;
+}
 
-  &:hover,
-  &:focus {
-    color: $brand-color;
-    outline: none;
-  }
+.contact-link:hover,
+.contact-link:focus {
+  color: var(--brand-color, #c04a4a);
+  outline: none;
+}
 
-  &--resume {
-    color: #333;
-    font-weight: 600;
-  }
+.contact-link--resume {
+  color: #333;
+  font-weight: 600;
 }
 
 @media (max-width: 480px) {

@@ -1,4 +1,4 @@
-import './App.scss';
+import './App.css';
 import Home from './features/Home';
 import Contact from './features/Contact';
 import Portfolio from './features/Portfolio';
@@ -38,20 +38,22 @@ function App() {
     <>
       <NavBar />
       <div className="scroll-main-layout" id="main-scroll" data-scroll-container ref={scrollRef}>
-        <section id="home" data-scroll-section>
-          <Home />
-        </section>
-        <section id="skills" data-scroll-section>
-          <Skills />
-        </section>
+        <main id="main-content" role="main">
+          <section id="home" data-scroll-section>
+            <Home />
+          </section>
+          <section id="skills" data-scroll-section>
+            <Skills />
+          </section>
 
-        <section id="portfolio" data-scroll-section>
-          <Portfolio />
-        </section>
-        <section id="contact" data-scroll-section>
-          <Contact />
-          <Footer />
-        </section>
+          <section id="portfolio" data-scroll-section>
+            <Portfolio />
+          </section>
+          <section id="contact" data-scroll-section>
+            <Contact />
+            <Footer />
+          </section>
+        </main>
       </div>
     </>
   );

@@ -1,4 +1,4 @@
-import './index.scss';
+import './index.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import scrollToId from '../../utils/scrollTo';

@@ -1,6 +1,7 @@
 /* Full portfolio styles copied from assets/components/Portfolio/index.scss */
 @import '../../styles/variables.scss';
 .portfolio-main-layout {
+  position: relative;
   display: flex;
   min-height: 100vh;
   width: 100vw;

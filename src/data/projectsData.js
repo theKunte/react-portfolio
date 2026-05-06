@@ -14,7 +14,7 @@ const projects = [
     github: 'http://github.com',
     // Use imported image: image: project1Img,
     // Or use public folder:
-    image: `${process.env.PUBLIC_URL}/portfolio/project1/one.png`,
+    image: `${import.meta.env.BASE_URL}portfolio/project1/one.png`,
     // Or use Firebase Storage URL directly:
     // image: 'https://firebasestorage.googleapis.com/v0/b/react-portfolio-dashboar-d3461.appspot.com/o/portfolio%2Fproject1.png?alt=media&token=...',
   },
@@ -24,7 +24,7 @@ const projects = [
     tech: 'React, CSS, Node',
     demo: 'http://example.com',
     github: 'http://github.com',
-    image: `${process.env.PUBLIC_URL}/portfolio/project1/one.png`,
+    image: `${import.meta.env.BASE_URL}portfolio/project1/one.png`,
   },
   {
     title: 'Project Three',
@@ -32,7 +32,7 @@ const projects = [
     tech: 'React, Serverless, DynamoDB',
     demo: 'http://example.com',
     github: 'http://github.com',
-    image: `${process.env.PUBLIC_URL}/portfolio/project1/one.png`,
+    image: `${import.meta.env.BASE_URL}portfolio/project1/one.png`,
   },
 ];
 

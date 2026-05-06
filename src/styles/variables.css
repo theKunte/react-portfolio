@@ -1,0 +1,14 @@
+/* CSS Custom Properties - replacing Sass variables */
+:root {
+  /* Brand colors */
+  --brand-color: #c04a4a;
+  --accent-color: #fbbe08;
+  --card-border: #e2fcff;
+  --bg: #f7f9fb;
+
+  /* Text colors */
+  --muted-text: #6b7280;
+  --dark-900: #0c1127;
+  --text-muted: #6b7280;
+  --primary-color: #222629;
+}

@@ -1,7 +1,6 @@
 {
   "name": "react-portfolio",
   "version": "0.1.0",
-  "homepage": "https://theKunte.github.io/react-portfolio",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
@@ -24,16 +23,13 @@
     "react-leaflet": "^4.2.0",
     "react-loaders": "^3.0.1",
     "react-router-dom": "^6.6.1",
-    "react-scripts": "5.0.1",
     "route": "^0.2.5",
-    "sass": "^1.57.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "lint": "npx eslint \"src/**/*.{js,jsx,ts,tsx}\"",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "eslint:fix": "npx eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix"
@@ -57,8 +53,10 @@
     ]
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.1",
     "eslint": "^8.57.1",
-    "gh-pages": "^6.1.1",
-    "prettier": "^3.6.2"
+    "gh-pages": "^6.3.0",
+    "prettier": "^3.6.2",
+    "vite": "^8.0.10"
   }
 }

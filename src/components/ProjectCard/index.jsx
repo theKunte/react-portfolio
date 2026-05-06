@@ -1,32 +1,36 @@
 import React from 'react';
-import './index.scss';
+import './index.css';
 
 const ProjectCard = ({ title, desc, tech, demo, github, image }) => {
   const handleImageError = (e) => {
-    console.error('Image failed to load:', image);
-    console.error('Error event:', e);
-    // Set a fallback image
-    e.target.src = `${process.env.PUBLIC_URL}/portfolio/project1/one.png`;
+    e.target.src = `${import.meta.env.BASE_URL}portfolio/project1/one.png`;
   };
 
-  const handleImageLoad = () => {
-    console.log('Image loaded successfully:', image);
+  const handleKeyDown = (e) => {
+    // Allow Enter or Space to activate the primary link
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      const primaryLink = demo || github;
+      if (primaryLink) {
+        window.open(primaryLink, '_blank', 'noopener,noreferrer');
+      }
+    }
   };
-
-  // Log the image URL when component renders
-  React.useEffect(() => {
-    console.log('ProjectCard image URL:', image);
-  }, [image]);
 
   return (
-    <div className="portfolio-project-card">
+    <div
+      className="portfolio-project-card"
+      tabIndex="0"
+      role="article"
+      aria-label={`${title} project`}
+      onKeyDown={handleKeyDown}
+    >
       <div className="portfolio-image-wrapper small dice-style-image" aria-hidden={!!desc}>
-        <img 
-          src={image} 
-          className="portfolio-image" 
-          alt={title || 'project'}
+        <img
+          src={image}
+          className="portfolio-image"
+          alt={`${title || 'project'} screenshot`}
           onError={handleImageError}
-          onLoad={handleImageLoad}
         />
         <div className="portfolio-hover-info" aria-hidden="true">
           <h2 className="portfolio-title">{title}</h2>
@@ -34,12 +38,24 @@ const ProjectCard = ({ title, desc, tech, demo, github, image }) => {
           {tech && <p className="portfolio-info">{tech}</p>}
           <div className="portfolio-card-links">
             {demo && (
-              <a className="portfolio-btn" href={demo} target="_blank" rel="noopener noreferrer">
+              <a
+                className="portfolio-btn"
+                href={demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View ${title} demo`}
+              >
                 View Project
               </a>
             )}
             {github && (
-              <a className="portfolio-btn" href={github} target="_blank" rel="noopener noreferrer">
+              <a
+                className="portfolio-btn"
+                href={github}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View ${title} source code on GitHub`}
+              >
                 Source
               </a>
             )}
