@@ -1,13 +1,13 @@
 /* Footer styles */
 .footer {
-  width: 100%;
+  width: 100vw;
   position: relative;
   background: rgba(192, 74, 74, 0.85);
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(12px) saturate(180%);
-  padding: 28px 16px 12px 16px;
+  padding: 60px 24px 12px 24px;
   font-family: 'Lato', Arial, sans-serif;
-  margin-top: 0;
+  margin: 0;
   z-index: 10;
   box-shadow: 0 -2px 24px rgba(0, 0, 0, 0.08);
   border-top: 1px solid rgba(255, 255, 255, 0.18);
@@ -22,7 +22,7 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 24px;
-  padding: 8px 12px;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -157,7 +157,7 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  padding: 6px 12px;
+  padding: 6px 0;
 }
 
 .footer-copy {
@@ -166,7 +166,7 @@
   color: #9fb2d0;
   font-size: 0.88rem;
   text-align: center;
-  padding: 6px 12px;
+  padding: 6px 0;
 }
 
 @media (max-width: 800px) {

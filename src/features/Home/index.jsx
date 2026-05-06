@@ -10,9 +10,9 @@ const Home = () => {
           <h1 className="home-title">
             Hi, I'm <span className="name">Jenny Kunte</span>
           </h1>
-          <h2 className="home-job">Frontend Developer</h2>
+          <h2 className="home-job">Full-Stack Developer</h2>
           <p className="home-description">
-            I'm a Seattle-based frontend developer who builds responsive, accessible React
+            I'm a Seattle-based Full-Stack Developer who builds responsive, accessible React
             applications — and takes them full-stack when the problem calls for it. I care about
             clean code, real test coverage, and shipping features that work in production.
           </p>

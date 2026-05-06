@@ -55,7 +55,7 @@
   font-family: 'Montserrat', 'Coolvetica', Arial, sans-serif;
   font-size: 1.6rem;
   font-weight: 800;
-  color: #fbbe08;
+  color: var(--muted-text, #6b7280);
   margin-bottom: 28px;
   text-align: center;
   letter-spacing: 1px;

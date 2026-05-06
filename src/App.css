@@ -35,7 +35,7 @@ textarea {
 
 [data-scroll-section] {
   width: 100vw;
-  min-height: 85vh;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,12 +52,16 @@ section[data-scroll-section] > * {
   padding: 0;
 }
 
+section[data-scroll-section] > footer,
+section[data-scroll-section] > .footer {
+  max-width: none;
+}
+
 footer,
 .footer {
   width: 100vw;
   margin: 0;
   padding: 0;
-  border-top: 1px solid #eaeaea;
   position: relative;
   z-index: 20;
 }

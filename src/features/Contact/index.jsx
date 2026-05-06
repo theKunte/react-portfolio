@@ -4,6 +4,7 @@ const Contact = () => {
   return (
     <section className="contact-section" id="contact">
       <div className="contact-cta">
+        <h2 className="contact-title">CONTACT</h2>
         <p className="contact-eyebrow">get in touch</p>
         <h2 className="contact-heading">Let's Talk</h2>
         <p className="contact-body">
@@ -21,38 +22,22 @@ const Contact = () => {
         </a>
 
         <div className="contact-links">
-          <a className="contact-link" href="mailto:jennykunte90@gmail.com">
-            jennykunte90@gmail.com
-          </a>
-          <span className="contact-divider" aria-hidden="true">
-            ·
-          </span>
-          <a
-            className="contact-link"
-            href="https://github.com/theKunte"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-          <span className="contact-divider" aria-hidden="true">
-            ·
-          </span>
-          <a
+          {/* <a
             className="contact-link contact-link--resume"
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
             Resume ↗
-          </a>
+          </a> */}
         </div>
       </div>
 
-      <div className="scroll-indicator" aria-hidden="true">
+      {/* Scroll indicator hidden on last section before footer */}
+      {/* <div className="scroll-indicator" aria-hidden="true">
         <span className="scroll-dot" />
         <span className="scroll-line" />
-      </div>
+      </div> */}
     </section>
   );
 };
