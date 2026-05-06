@@ -1,4 +1,4 @@
-import './index.scss';
+import './index.css';
 
 const skillsData = [
   {
@@ -6,16 +6,30 @@ const skillsData = [
     skills: [{ name: 'JavaScript' }, { name: 'TypeScript' }, { name: 'Python' }],
   },
   {
-    category: 'Frameworks / Libraries',
-    skills: [{ name: 'React, React Native' }, { name: 'Node.js' }, { name: 'Express.js' }],
+    category: 'Frontend',
+    skills: [
+      { name: 'React' },
+      { name: 'React Native' },
+      { name: 'Tailwind CSS' },
+      { name: 'SCSS' },
+    ],
   },
   {
-    category: 'Software / Tools',
-    skills: [{ name: 'Firebase' }, { name: 'AWS' }, { name: 'Azure' }],
+    category: 'Backend',
+    skills: [
+      { name: 'Node.js' },
+      { name: 'Express.js' },
+      { name: 'Prisma ORM' },
+      { name: 'PostgreSQL' },
+    ],
   },
   {
-    category: 'Operating System',
-    skills: [{ name: 'Windows' }, { name: 'Linux' }],
+    category: 'Auth & Cloud',
+    skills: [{ name: 'Firebase Auth' }, { name: 'AWS' }, { name: 'Azure' }],
+  },
+  {
+    category: 'DevOps & Tooling',
+    skills: [{ name: 'Docker' }, { name: 'CI/CD (GitHub Actions)' }, { name: 'Git' }],
   },
   {
     category: 'AI / ML (Learning)',
@@ -57,6 +71,11 @@ const Skills = () => {
             </ul>
           </div>
         ))}
+      </div>
+
+      <div className="scroll-indicator" aria-hidden="true">
+        <span className="scroll-dot" />
+        <span className="scroll-line" />
       </div>
     </section>
   );

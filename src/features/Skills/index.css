@@ -1,16 +1,9 @@
-@import '../../styles/variables.scss';
-
-/*
-  Consolidated Skills styles.
-  - Merged duplicated selectors and kept responsive rules.
-  - Use $bg from variables where appropriate.
-*/
-
+/* Skills section styles */
 .skills-section {
   position: relative;
   width: 100vw;
   min-height: 60vh;
-  background: $bg;
+  background: var(--bg, #f7f9fb);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -142,11 +135,12 @@
   margin: 0 8px;
   box-sizing: border-box;
   transition: all 0.3s ease;
-  &:hover {
-    background: rgba(255, 255, 255, 0.9);
-    transform: translateY(-4px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
-  }
+}
+
+.skills-category-block:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 }
 
 .skills-category-title {

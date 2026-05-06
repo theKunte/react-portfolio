@@ -1,4 +1,4 @@
-import './App.scss';
+import './App.css';
 import Home from './features/Home';
 import Contact from './features/Contact';
 import Portfolio from './features/Portfolio';
