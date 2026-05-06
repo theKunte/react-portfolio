@@ -1,26 +1,18 @@
 [
   {
-    "title": "Project One",
-    "desc": "A demo project built with React and AWS.",
-    "tech": "React, JSX, AWS",
-    "demo": "http://example.com",
-    "github": "http://github.com",
-    "image": "/portfolio/project1/one.png"
+    "title": "GearShare",
+    "desc": "A community gear-sharing platform where neighbours can list equipment, form trusted groups, and manage borrow requests in real time. Features Firebase authentication, group-based access control, a RESTful Express API backed by PostgreSQL via Prisma ORM, Docker Compose for local development, and a CI/CD pipeline with automated test coverage.",
+    "tech": "React 19, TypeScript, Node.js, Express, PostgreSQL, Prisma, Firebase Auth, Docker, Tailwind CSS",
+    "demo": "",
+    "github": "https://github.com/theKunte/local-resource-sharing",
+    "image": "portfolio/project1/one.png"
   },
   {
-    "title": "Project Two",
-    "desc": "Another project showing UI work.",
-    "tech": "React, CSS, Node",
-    "demo": "http://example.com",
-    "github": "http://github.com",
-    "image": "/portfolio/project1/one.png"
-  },
-  {
-    "title": "Project Three",
-    "desc": "A full-stack app using serverless services.",
-    "tech": "React, Serverless, DynamoDB",
-    "demo": "http://example.com",
-    "github": "http://github.com",
-    "image": "/portfolio/project1/one.png"
+    "title": "Dice Game (Strike)",
+    "desc": "A browser-based Yahtzee-style scoring game built entirely in React. Players roll five dice up to three times per turn and strategically choose from 13 scoring categories to maximise their score across 13 rounds. Deployed and playable live via GitHub Pages.",
+    "tech": "React, JavaScript, CSS",
+    "demo": "https://thekunte.github.io/dice-game/",
+    "github": "https://github.com/theKunte/dice-game",
+    "image": "portfolio/project1/one.png"
   }
 ]
