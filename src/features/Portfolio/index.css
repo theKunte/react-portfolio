@@ -36,7 +36,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 0 40px 0;
+  padding: 0 24px 40px 24px;
+}
+
+@media (max-width: 900px) {
+  .portfolio-content-zone {
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-content-zone {
+    padding-top: 80px;
+  }
 }
 
 /* Removed duplicate .skills-title, .skills-subtitle, and .main-title - now in shared sections.css */

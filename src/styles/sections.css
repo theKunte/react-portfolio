@@ -9,8 +9,9 @@
   opacity: 0.16;
   text-align: center;
   letter-spacing: 2px;
-  margin-bottom: -18px;
+  margin-bottom: 8px;
   margin-top: 0;
+  padding: 0 24px;
   user-select: none;
 }
 
@@ -23,6 +24,7 @@
   line-height: 1.7;
   max-width: 600px;
   margin: 0 auto 28px;
+  padding: 0 24px;
   text-align: center;
   letter-spacing: 0.3px;
 }
@@ -31,14 +33,14 @@
 @media (max-width: 900px) {
   .skills-title {
     font-size: 3.6rem;
-    margin-bottom: -12px;
+    margin-bottom: 6px;
   }
 }
 
 @media (max-width: 600px) {
   .skills-title {
     font-size: 2.9rem;
-    margin-bottom: -12px;
+    margin-bottom: 6px;
   }
 
   .skills-subtitle {

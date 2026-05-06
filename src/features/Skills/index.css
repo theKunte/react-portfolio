@@ -13,6 +13,18 @@
   overflow-x: hidden;
 }
 
+@media (max-width: 900px) {
+  .skills-section {
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-section {
+    padding-top: 80px;
+  }
+}
+
 .skills-wrapper {
   width: 100%;
   max-width: 1200px;
