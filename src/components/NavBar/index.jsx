@@ -9,7 +9,14 @@ const scrollToContact = (e) => {
 
 const Navbar = () => {
   const [hideOnScroll, setHideOnScroll] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const idleTimer = useRef(null);
+
+  const handleNavClick = (e, sectionId) => {
+    e.preventDefault();
+    scrollToId(sectionId);
+    setMobileMenuOpen(false);
+  };
 
   useEffect(() => {
     const IDLE_MS = 400;
@@ -65,21 +72,84 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className={`nav-bar${hideOnScroll ? ' nav-bar--hidden' : ''}`}>
-      <div className="nav-sayhello-wrapper">
-        <a
-          href="#contact"
-          className="sayhello-btn"
-          aria-label="Say Hello"
-          onClick={scrollToContact}
+    <>
+      {/* Skip Link for Keyboard Navigation */}
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
+
+      <div
+        className={`nav-bar${hideOnScroll ? ' nav-bar--hidden' : ''}`}
+        role="navigation"
+        aria-label="Main navigation"
+      >
+        <div className="nav-inner">
+          <nav className="nav-links">
+            <a href="#home" onClick={(e) => handleNavClick(e, 'home')}>
+              Home
+            </a>
+            <a href="#skills" onClick={(e) => handleNavClick(e, 'skills')}>
+              Skills
+            </a>
+            <a href="#portfolio" onClick={(e) => handleNavClick(e, 'portfolio')}>
+              Projects
+            </a>
+            <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>
+              Contact
+            </a>
+          </nav>
+
+          <div className="nav-actions">
+            <a
+              href="#contact"
+              className="sayhello-btn"
+              aria-label="Say Hello"
+              onClick={scrollToContact}
+            >
+              Say Hello{' '}
+              <span className="wave-emoji" role="img" aria-label="Waving Hand">
+                👋
+              </span>
+            </a>
+          </div>
+
+          <button
+            className="mobile-menu-toggle"
+            aria-label="Toggle menu"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        <nav
+          id="mobile-menu"
+          className={`mobile-menu${mobileMenuOpen ? ' mobile-menu--open' : ''}`}
+          aria-label="Mobile navigation"
         >
-          Say Hello{' '}
-          <span className="wave-emoji" role="img" aria-label="Waving Hand">
-            👋
-          </span>
-        </a>
+          <a href="#home" onClick={(e) => handleNavClick(e, 'home')}>
+            Home
+          </a>
+          <a href="#skills" onClick={(e) => handleNavClick(e, 'skills')}>
+            Skills
+          </a>
+          <a href="#portfolio" onClick={(e) => handleNavClick(e, 'portfolio')}>
+            Projects
+          </a>
+          <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>
+            Contact
+          </a>
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            Resume
+          </a>
+        </nav>
       </div>
-    </div>
+    </>
   );
 };
 

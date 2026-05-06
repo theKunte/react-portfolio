@@ -83,3 +83,106 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+/* ========================================
+   ACCESSIBILITY: Focus Indicators
+   ======================================== */
+
+/* Remove default outline only when replacing with custom focus styles */
+*:focus {
+  outline: none;
+}
+
+/* Custom focus styles for better visibility */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+[tabindex]:focus {
+  outline: 3px solid var(--accent-color, #fbbe08);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px rgba(251, 190, 8, 0.2);
+  transition:
+    outline 0.2s,
+    box-shadow 0.2s;
+}
+
+/* Enhanced focus for navigation links */
+.nav-links a:focus {
+  outline: 2px solid var(--accent-color, #fbbe08);
+  outline-offset: 4px;
+  background: rgba(251, 190, 8, 0.1);
+  border-radius: 4px;
+}
+
+/* Button focus states */
+button:focus,
+.sayhello-btn:focus,
+.home-btn:focus,
+.contact-email-btn:focus {
+  outline: 3px solid var(--accent-color, #fbbe08);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px rgba(251, 190, 8, 0.25);
+}
+
+/* Mobile menu toggle focus */
+.mobile-menu-toggle:focus {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+/* Card focus states */
+.portfolio-project-card:focus,
+.skills-category-block:focus {
+  outline: 3px solid var(--brand-color, #c04a4a);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 3px rgba(192, 74, 74, 0.2);
+  transform: translateY(-4px);
+}
+
+/* Form input focus */
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--brand-color, #c04a4a);
+  outline-offset: 2px;
+  border-color: var(--brand-color, #c04a4a);
+  box-shadow: 0 0 0 3px rgba(192, 74, 74, 0.15);
+}
+
+/* Social icon focus */
+.contact-links a:focus,
+.footer-social a:focus {
+  outline: 2px solid var(--accent-color, #fbbe08);
+  outline-offset: 3px;
+  transform: scale(1.15);
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .skip-link:focus {
+    transition: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  a:focus,
+  button:focus,
+  input:focus,
+  textarea:focus {
+    outline-width: 4px;
+    outline-offset: 4px;
+  }
+}
