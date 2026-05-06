@@ -9,6 +9,7 @@ const skillsData = [
     category: 'Frontend',
     skills: [
       { name: 'React' },
+      { name: 'Vite' },
       { name: 'React Native' },
       { name: 'Tailwind CSS' },
       { name: 'SCSS' },
@@ -21,19 +22,34 @@ const skillsData = [
       { name: 'Express.js' },
       { name: 'Prisma ORM' },
       { name: 'PostgreSQL' },
+      { name: 'REST APIs' },
     ],
   },
   {
     category: 'Auth & Cloud',
-    skills: [{ name: 'Firebase Auth' }, { name: 'AWS' }, { name: 'Azure' }],
+    skills: [
+      { name: 'Firebase Auth' },
+      { name: 'Firebase Firestore' },
+      { name: 'AWS' },
+      { name: 'Azure' },
+    ],
   },
   {
     category: 'DevOps & Tooling',
-    skills: [{ name: 'Docker' }, { name: 'CI/CD (GitHub Actions)' }, { name: 'Git' }],
+    skills: [
+      { name: 'Docker' },
+      { name: 'Docker Compose' },
+      { name: 'CI/CD (GitHub Actions)' },
+      { name: 'Git' },
+    ],
   },
   {
     category: 'AI / ML (Learning)',
-    skills: [{ name: 'Hugging Face Agents' }, { name: 'AI Agents (Conceptual)' }],
+    skills: [
+      { name: 'AI Agents (Hugging Face Agent framework)' },
+      { name: 'LLM Prompt Engineering & Prompt Optimization' },
+      { name: 'Basic NLP' },
+    ],
   },
 ];
 
