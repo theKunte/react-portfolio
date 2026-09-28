@@ -67,14 +67,6 @@ footer,
   z-index: 20;
 }
 
-nav,
-.navbar {
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-  border-bottom: 1px solid #eaeaea;
-}
-
 body {
   background: #f7f9fb;
   font-family: 'Lato', Arial, sans-serif;

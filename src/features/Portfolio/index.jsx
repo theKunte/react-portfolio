@@ -2,7 +2,7 @@ import './index.css';
 import React, { useState, useEffect } from 'react';
 import ProjectCard from '../../components/ProjectCard';
 import scrollToId from '../../utils/scrollTo';
-import projectsData from '../../data/projectsData';
+import projectsData, { pinnedProjects } from '../../data/projectsData';
 import { collection, getDocs } from 'firebase/firestore/lite';
 import { db } from '../../firebase';
 
@@ -39,11 +39,20 @@ const normalizeProject = (raw = {}, idx) => {
     imagePath = `${import.meta.env.BASE_URL}${image}`;
   }
 
-  return { id, title, desc, tech, demo, github, image: imagePath };
+  const status = raw.status || '';
+
+  return { id, title, status, desc, tech, demo, github, image: imagePath };
+};
+
+// Pinned projects always come first; drop any duplicate of them from the loaded list.
+const withPinned = (list) => {
+  const pinned = pinnedProjects.map((p, i) => normalizeProject(p, i));
+  const pinnedTitles = new Set(pinned.map((p) => p.title.toLowerCase()));
+  return [...pinned, ...list.filter((p) => !pinnedTitles.has(p.title.toLowerCase()))];
 };
 
 const Portfolio = () => {
-  const [projects, setProjects] = useState(projectsData);
+  const [projects, setProjects] = useState(() => withPinned([]));
 
   useEffect(() => {
     let mounted = true;
@@ -55,7 +64,7 @@ const Portfolio = () => {
         if (snapshot.docs.length === 0) return false;
         const docs = snapshot.docs.map((d, i) => normalizeProject({ id: d.id, ...d.data() }, i));
         if (mounted && Array.isArray(docs) && docs.length > 0) {
-          setProjects(docs);
+          setProjects(withPinned(docs));
           return true;
         }
       } catch (err) {
@@ -66,14 +75,14 @@ const Portfolio = () => {
 
     const fetchFromPublicJson = async () => {
       try {
-        const res = await fetch('/projects.json');
+        const res = await fetch(`${import.meta.env.BASE_URL}projects.json`);
         if (!res.ok) throw new Error('no projects');
         const items = await res.json();
         const normalized = Array.isArray(items)
           ? items.map((it, i) => normalizeProject(it, i))
           : [];
         if (mounted && normalized.length > 0) {
-          setProjects(normalized);
+          setProjects(withPinned(normalized));
           return true;
         }
       } catch (err) {
@@ -89,7 +98,7 @@ const Portfolio = () => {
       if (fromJson) return;
       // fallback: normalize bundled data
       const normalized = projectsData.map((p, i) => normalizeProject(p, i));
-      if (mounted) setProjects(normalized);
+      if (mounted) setProjects(withPinned(normalized));
     };
 
     loadProjects();
@@ -106,7 +115,8 @@ const Portfolio = () => {
           <h2 className="skills-title">PROJECTS</h2>
           <p className="skills-subtitle">
             {' '}
-            Here are a few past projects I've worked on. Want to see more?{' '}
+            From the product I'm launching to the apps and games I've built along the way. Want to
+            see more?{' '}
             <a
               href="#contact"
               onClick={(e) => {
@@ -124,6 +134,7 @@ const Portfolio = () => {
               <ProjectCard
                 key={p.id || i}
                 title={p.title}
+                status={p.status}
                 desc={p.desc}
                 tech={p.tech}
                 demo={p.demo}

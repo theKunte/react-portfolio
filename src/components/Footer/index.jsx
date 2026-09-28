@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="footer-left">
           <div className="footer-brand">
             <strong className="brand-name">Jenny Kunte</strong>
-            <div className="brand-sub">Application Developer — Seattle, WA</div>
+            <div className="brand-sub">Founder & Software Engineer — Seattle, WA</div>
           </div>
           <div className="footer-social" aria-label="Social links">
             <a
@@ -41,7 +41,7 @@ const Footer = () => {
         <div className="footer-right">
           <nav className="footer-nav" aria-label="Footer navigation">
             <a
-              href="/"
+              href="#home"
               className="footer-nav-link"
               onClick={(e) => {
                 e.preventDefault();
@@ -52,7 +52,7 @@ const Footer = () => {
             </a>
             <div className="footer-nav-group">
               <a
-                href="/portfolio"
+                href="#portfolio"
                 className="footer-nav-link footer-projects-link"
                 onClick={(e) => {
                   e.preventDefault();

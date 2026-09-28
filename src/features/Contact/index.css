@@ -11,6 +11,8 @@
 .contact-cta {
   max-width: 600px;
   width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -22,7 +24,7 @@
 
 .contact-eyebrow {
   font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 0.85rem;
+  font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -41,11 +43,18 @@
 
 .contact-body {
   font-family: 'Lato', Arial, sans-serif;
-  font-size: 1.15rem;
+  font-size: 1.7rem;
   color: var(--muted-text, #6b7280);
   line-height: 1.7;
   max-width: 480px;
   margin: 0;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
 }
 
 .contact-email-btn {
@@ -57,8 +66,8 @@
   border: 2px solid var(--accent-color, #fbbe08);
   border-radius: 32px;
   font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 700;
   letter-spacing: 0.5px;
   text-decoration: none;
   transition:
@@ -116,4 +125,16 @@
     font-size: 0.9rem;
     padding: 12px 24px;
   }
+}
+
+.contact-email-btn--secondary {
+  background: transparent;
+  border-color: #1a2341;
+}
+
+.contact-email-btn--secondary:hover,
+.contact-email-btn--secondary:focus {
+  background: #1a2341;
+  border-color: #1a2341;
+  color: #fff;
 }

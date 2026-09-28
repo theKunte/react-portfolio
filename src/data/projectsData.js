@@ -1,38 +1,37 @@
-// Option 1: Import images directly (BEST - bundled with webpack)
-// import project1Img from '../assets/images/projects/project1.png';
-// import project2Img from '../assets/images/projects/project2.png';
+// Projects pinned to the front of the Projects section, whatever the data source.
+export const pinnedProjects = [
+  {
+    id: 'wildpeer',
+    title: 'WildPeer',
+    status: 'Coming soon',
+    desc: 'A trust-focused platform for peer-to-peer outdoor gear sharing. Borrow tents, packs, and trail gear from friends and clubs you already trust.',
+    tech: 'TypeScript, React, Node.js, Prisma, Firebase Auth, Docker',
+    demo: 'https://thekunte.github.io/wildpeer-coming-soon/',
+    github: '',
+    image: 'portfolio/wildpeer.webp',
+  },
+];
 
-// Option 2: Use public folder with PUBLIC_URL (your current approach)
-// Option 3: Use external URLs (Firebase Storage, Imgur, Cloudinary, etc.)
-
+// Fallback projects, used only when Firestore and public/projects.json are unavailable.
 const projects = [
   {
-    title: 'Project One',
-    desc: 'A demo project built with React and AWS.',
-    tech: 'React, JSX, AWS',
-    demo: 'http://example.com',
-    github: 'http://github.com',
-    // Use imported image: image: project1Img,
-    // Or use public folder:
-    image: `${import.meta.env.BASE_URL}portfolio/project1/one.png`,
-    // Or use Firebase Storage URL directly:
-    // image: 'https://firebasestorage.googleapis.com/v0/b/react-portfolio-dashboar-d3461.appspot.com/o/portfolio%2Fproject1.png?alt=media&token=...',
+    title: 'GearShare',
+    desc: 'A community gear-sharing platform where neighbours list equipment, form trusted groups, and manage borrow requests in real time.',
+    tech: 'React, TypeScript, Node.js, Express, PostgreSQL, Prisma, Firebase Auth, Docker',
+    github: 'https://github.com/theKunte/local-resource-sharing',
   },
   {
-    title: 'Project Two',
-    desc: 'Another project showing UI work.',
-    tech: 'React, CSS, Node',
-    demo: 'http://example.com',
-    github: 'http://github.com',
-    image: `${import.meta.env.BASE_URL}portfolio/project1/one.png`,
+    title: 'Dice Game (Strike)',
+    desc: 'I built this so my husband and I could play our favorite dice game on road trips, with no ads. Roll five dice up to three times a turn and choose from 13 scoring categories. Built in React and playable live.',
+    tech: 'React, JavaScript, CSS',
+    demo: 'https://thekunte.github.io/dice-game/',
+    github: 'https://github.com/theKunte/dice-game',
   },
   {
-    title: 'Project Three',
-    desc: 'A full-stack app using serverless services.',
-    tech: 'React, Serverless, DynamoDB',
-    demo: 'http://example.com',
-    github: 'http://github.com',
-    image: `${import.meta.env.BASE_URL}portfolio/project1/one.png`,
+    title: 'Spotify Favorites',
+    desc: 'Pick a year and listen to the songs I had on repeat.',
+    tech: 'React, Spotify embeds',
+    github: 'https://github.com/theKunte/spotify-favorites',
   },
 ];
 

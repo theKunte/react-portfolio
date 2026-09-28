@@ -83,8 +83,6 @@
   transition:
     transform 0.18s,
     box-shadow 0.18s;
-  min-height: 280px;
-  height: 320px;
   max-width: 380px;
   width: 100%;
   cursor: pointer;
@@ -112,28 +110,40 @@
   z-index: 2;
 }
 
-.portfolio-project-card:hover .portfolio-hover-info {
+.portfolio-project-card:hover .portfolio-hover-info,
+.portfolio-project-card:focus-within .portfolio-hover-info {
   opacity: 1;
   pointer-events: auto;
 }
 
 .portfolio-hover-info .portfolio-title {
   color: var(--accent-color, #fbbe08);
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin: 0 0 8px;
 }
 
 .portfolio-hover-info .portfolio-description {
   color: #fff;
-  font-size: 1rem;
-  margin-bottom: 8px;
+  font-size: 1.35rem;
+  line-height: 1.5;
+  margin: 0 0 8px;
+  /* keep long descriptions to 4 lines so the buttons always fit */
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .portfolio-hover-info .portfolio-info {
   color: #e0e0e0;
-  font-size: 0.95rem;
-  margin-bottom: 14px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 0 0 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .portfolio-hover-info .portfolio-btn {
@@ -142,9 +152,9 @@
   border-radius: 18px;
   border: none;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.25rem;
   padding: 8px 22px;
-  margin-top: 8px;
+  margin-top: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition:
     background 0.2s,
@@ -164,7 +174,7 @@
   align-items: center;
   justify-content: center;
   padding: 0 !important;
-  height: 420px;
+  height: 280px;
 }
 
 .dice-style-image .portfolio-image {
@@ -246,5 +256,77 @@
   * {
     animation: none !important;
     transition: none !important;
+  }
+}
+
+/* Buttons sit side by side in the overlay */
+.portfolio-card-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* "Coming soon" style badge on the image */
+.portfolio-status {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 3;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--accent-color, #fbbe08);
+  color: #1a2341;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Always-visible title under the image */
+.portfolio-caption {
+  padding: 14px 18px;
+  font-family: 'Montserrat', 'Coolvetica', Arial, sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #1a2341;
+  text-align: center;
+}
+
+/* With a mouse, the hover panel covers the whole card (image + title) so the text fits */
+@media (hover: hover) {
+  .portfolio-project-card {
+    position: relative;
+  }
+
+  .portfolio-cards-wrapper .portfolio-project-card .portfolio-image-wrapper {
+    position: static;
+  }
+
+  .portfolio-hover-info {
+    border-radius: 20px;
+    padding: 20px;
+    background: rgba(26, 35, 65, 0.97);
+  }
+}
+
+/* Touch screens can't hover: show the details under the image instead of over it */
+@media (hover: none) {
+  .dice-style-image {
+    height: auto;
+    flex-direction: column;
+    background: #1a2341 !important;
+  }
+
+  .portfolio-hover-info {
+    position: static;
+    opacity: 1;
+    pointer-events: auto;
+    background: #1a2341;
+  }
+
+  .portfolio-caption {
+    display: none;
   }
 }

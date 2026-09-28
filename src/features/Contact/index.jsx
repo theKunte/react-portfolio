@@ -8,18 +8,28 @@ const Contact = () => {
         <p className="contact-eyebrow">get in touch</p>
         <h2 className="contact-heading">Let's Talk</h2>
         <p className="contact-body">
-          I'm open to frontend and full-stack roles. If you have a project in mind or just want to
-          connect, my inbox is always open.
+          I'm open to software engineering roles in Seattle or remote. If you have a role or project
+          in mind, or just want to connect, reach out on LinkedIn.
         </p>
 
-        <a
-          className="contact-email-btn"
-          href="https://www.linkedin.com/in/jenny-kunte-seattle/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Connect on LinkedIn
-        </a>
+        <div className="contact-actions">
+          <a
+            className="contact-email-btn"
+            href="https://www.linkedin.com/in/jenny-kunte-seattle/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Connect on LinkedIn
+          </a>
+          <a
+            className="contact-email-btn contact-email-btn--secondary"
+            href="https://github.com/theKunte"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View GitHub
+          </a>
+        </div>
 
         <div className="contact-links">
           {/* <a

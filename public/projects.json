@@ -9,10 +9,18 @@
   },
   {
     "title": "Dice Game (Strike)",
-    "desc": "A browser-based Yahtzee-style scoring game built entirely in React. Players roll five dice up to three times per turn and strategically choose from 13 scoring categories to maximise their score across 13 rounds. Deployed and playable live via GitHub Pages.",
+    "desc": "I built this so my husband and I could play our favorite dice game on road trips, with no ads. Roll five dice up to three times a turn and choose from 13 scoring categories. Built in React and playable live.",
     "tech": "React, JavaScript, CSS",
     "demo": "https://thekunte.github.io/dice-game/",
     "github": "https://github.com/theKunte/dice-game",
+    "image": "portfolio/project1/one.png"
+  },
+  {
+    "title": "Spotify Favorites",
+    "desc": "Pick a year and listen to the songs I had on repeat. A React app built around Spotify playlist embeds.",
+    "tech": "React, Spotify embeds",
+    "demo": "",
+    "github": "https://github.com/theKunte/spotify-favorites",
     "image": "portfolio/project1/one.png"
   }
 ]
