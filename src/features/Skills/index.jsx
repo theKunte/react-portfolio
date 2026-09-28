@@ -3,14 +3,14 @@ import './index.css';
 const skillsData = [
   {
     category: 'Languages',
-    skills: [{ name: 'JavaScript' }, { name: 'TypeScript' }, { name: 'Python' }],
+    skills: [{ name: 'TypeScript' }, { name: 'JavaScript' }, { name: 'Python' }],
   },
   {
     category: 'Frontend',
     skills: [
       { name: 'React' },
-      { name: 'Vite' },
       { name: 'React Native' },
+      { name: 'Vite' },
       { name: 'Tailwind CSS' },
       { name: 'SCSS' },
     ],
@@ -20,35 +20,36 @@ const skillsData = [
     skills: [
       { name: 'Node.js' },
       { name: 'Express.js' },
-      { name: 'Prisma ORM' },
       { name: 'PostgreSQL' },
-      { name: 'REST APIs' },
+      { name: 'Prisma ORM' },
+      { name: 'Versioned REST APIs' },
     ],
   },
   {
-    category: 'Auth & Cloud',
+    category: 'Auth & Security',
     skills: [
       { name: 'Firebase Auth' },
+      { name: 'JWT' },
+      { name: 'Role-based access control' },
+      { name: 'Rate limiting & input sanitization' },
+    ],
+  },
+  {
+    category: 'Infra & DevOps',
+    skills: [
+      { name: 'Docker & Docker Compose' },
+      { name: 'CI/CD (GitHub Actions)' },
       { name: 'Firebase Firestore' },
       { name: 'AWS' },
       { name: 'Azure' },
     ],
   },
   {
-    category: 'DevOps & Tooling',
+    category: 'Building with AI',
     skills: [
-      { name: 'Docker' },
-      { name: 'Docker Compose' },
-      { name: 'CI/CD (GitHub Actions)' },
-      { name: 'Git' },
-    ],
-  },
-  {
-    category: 'AI / ML (Learning)',
-    skills: [
-      { name: 'AI Agents (Hugging Face Agent framework)' },
-      { name: 'LLM Prompt Engineering & Prompt Optimization' },
-      { name: 'Basic NLP' },
+      { name: 'AI coding agents in my daily workflow' },
+      { name: 'Prompt engineering' },
+      { name: 'Hugging Face Agents' },
     ],
   },
 ];
@@ -69,9 +70,7 @@ const Skills = () => {
   return (
     <section className="skills-section" id="skills">
       <h2 className="skills-title">TECH SKILLS</h2>
-      <p className="skills-subtitle">
-        Here are the technologies I use to build accessible, intelligent web apps.
-      </p>
+      <p className="skills-subtitle">The tools I use to take products from idea to production.</p>
 
       <div className="skills-grid">
         {deduped.map((cat) => (

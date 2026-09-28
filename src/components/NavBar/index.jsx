@@ -144,9 +144,6 @@ const Navbar = () => {
           <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>
             Contact
           </a>
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-            Resume
-          </a>
         </nav>
       </div>
     </>

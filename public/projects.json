@@ -14,5 +14,13 @@
     "demo": "https://thekunte.github.io/dice-game/",
     "github": "https://github.com/theKunte/dice-game",
     "image": "portfolio/project1/one.png"
+  },
+  {
+    "title": "Spotify Favorites",
+    "desc": "Pick a year and listen to the songs I had on repeat. A React app built around Spotify playlist embeds.",
+    "tech": "React, Spotify embeds",
+    "demo": "",
+    "github": "https://github.com/theKunte/spotify-favorites",
+    "image": "portfolio/project1/one.png"
   }
 ]

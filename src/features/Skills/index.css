@@ -113,7 +113,7 @@
 
 .skills-list-block li {
   font-family: 'Lato', Arial, sans-serif;
-  font-size: 1.08rem;
+  font-size: 1.45rem;
   color: #222629;
   margin-bottom: 10px;
   display: flex;
@@ -121,4 +121,9 @@
   gap: 8px;
   padding-left: 0;
   text-align: left;
+}
+
+/* Leave room for the scroll indicator below the grid */
+.skills-grid {
+  margin-bottom: 110px;
 }
