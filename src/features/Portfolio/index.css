@@ -118,23 +118,32 @@
 
 .portfolio-hover-info .portfolio-title {
   color: var(--accent-color, #fbbe08);
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  margin: 0 0 10px;
+  margin: 0 0 8px;
 }
 
 .portfolio-hover-info .portfolio-description {
   color: #fff;
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   line-height: 1.5;
   margin: 0 0 8px;
+  /* keep long descriptions to 4 lines so the buttons always fit */
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .portfolio-hover-info .portfolio-info {
   color: #e0e0e0;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 1.5;
-  margin: 0 0 14px;
+  margin: 0 0 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .portfolio-hover-info .portfolio-btn {
@@ -143,9 +152,9 @@
   border-radius: 18px;
   border: none;
   font-weight: 700;
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   padding: 8px 22px;
-  margin-top: 8px;
+  margin-top: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition:
     background 0.2s,
@@ -283,6 +292,23 @@
   font-weight: 700;
   color: #1a2341;
   text-align: center;
+}
+
+/* With a mouse, the hover panel covers the whole card (image + title) so the text fits */
+@media (hover: hover) {
+  .portfolio-project-card {
+    position: relative;
+  }
+
+  .portfolio-cards-wrapper .portfolio-project-card .portfolio-image-wrapper {
+    position: static;
+  }
+
+  .portfolio-hover-info {
+    border-radius: 20px;
+    padding: 20px;
+    background: rgba(26, 35, 65, 0.97);
+  }
 }
 
 /* Touch screens can't hover: show the details under the image instead of over it */
