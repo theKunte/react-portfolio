@@ -22,7 +22,7 @@ const projects = [
   },
   {
     title: 'Dice Game (Strike)',
-    desc: 'A browser-based Yahtzee-style scoring game built in React.',
+    desc: 'I built this so my husband and I could play our favorite dice game on road trips, with no ads. Roll five dice up to three times a turn and choose from 13 scoring categories. Built in React and playable live.',
     tech: 'React, JavaScript, CSS',
     demo: 'https://thekunte.github.io/dice-game/',
     github: 'https://github.com/theKunte/dice-game',
